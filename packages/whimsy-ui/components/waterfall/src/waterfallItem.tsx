@@ -1,6 +1,6 @@
 import { defineComponent, toRefs } from 'vue';
 export default defineComponent({
-  name: 'WWaterFallItem',
+  name: 'WhWaterFallItem',
   props: {
     imgUrl: String,
     width: [String, Number],

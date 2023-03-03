@@ -1,6 +1,6 @@
 /** @format */
 
-import { WButton } from '..';
+import { WhButton } from '..';
 
 import { shallowMount } from '@vue/test-utils';
 import { describe, expect, test } from 'vitest';
@@ -9,7 +9,7 @@ describe('button组件插槽测试', () => {
   // mount
   test('mount  @vue/test-utils', () => {
     // @vue/test-utils
-    const wrapper = shallowMount(WButton, {
+    const wrapper = shallowMount(WhButton, {
       slots: {
         default: 'Button'
       }
@@ -21,7 +21,7 @@ describe('button组件插槽测试', () => {
 });
 describe('button组件颜色测试', () => {
   test('default', () => {
-    const wrapper = shallowMount(WButton, {
+    const wrapper = shallowMount(WhButton, {
       slots: {
         default: 'Button'
       }
@@ -36,7 +36,8 @@ describe('button组件颜色测试', () => {
     ).toBe(true);
   });
   test('red', () => {
-    const wrapper = shallowMount(WButton, {
+    // @ts-ignore
+    const wrapper = shallowMount(WhButton, {
       slots: {
         default: 'Button'
       },

@@ -12,18 +12,18 @@
     <h1>Demo</h1>
     <div id="app"></div>
     <script type="module">
-      import { createApp } from 'vue/dist/vue.esm-bundler.js'
-      import WhimsyUI, { WButton } from 'root/dist/whimsy-ui.mjs'
-      import 'root/dist/entry.css'
+      import { createApp } from 'vue/dist/vue.esm-bundler.js';
+      import WhimsyUI, { WhButton } from 'root/dist/whimsy-ui.mjs';
+      import 'root/dist/entry.css';
       createApp({
         template: `
-      <WButton>
+      <WhButton>
         esm demo button
-      </WButton>
+      </WhButton>
     `
       })
         .use(WhimsyUI)
-        .mount('#app')
+        .mount('#app');
     </script>
   </body>
 </html>

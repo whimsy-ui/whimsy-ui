@@ -1,9 +1,11 @@
 /** @format */
 import { type App } from 'vue';
-import { WButton } from './components';
-export { WButton };
+import { WhButton } from './components';
+import { WhWaterfall } from './components';
+export { WhButton, WhWaterfall };
 export default {
   install(app: App) {
-    app.component(WButton.name, WButton);
+    app.component(WhButton.name, WhButton);
+    app.component(WhWaterfall.name, WhWaterfall);
   }
 };

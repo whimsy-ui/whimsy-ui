@@ -15,7 +15,7 @@ export const waterfallProps: {
   teleport: [String, Object] as PropType<TeleportProps['to']>
 };
 export default defineComponent({
-  name: 'WWaterfall',
+  name: 'WhWaterfall',
   props: waterfallProps,
   emits: ['trigger', 'scrollBottom', 'scrollTop'],
   setup(props, { emit, slots }) {
