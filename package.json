@@ -33,9 +33,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@commitlint/cli": "^17.4.2",
-    "@commitlint/config-angular": "^17.4.2",
-    "@commitlint/cz-commitlint": "^17.4.2",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-angular": "^17.0.3",
+    "@commitlint/cz-commitlint": "^17.0.3",
     "@iconify-json/ic": "^1.1.12",
     "@types/node": "^18.14.6",
     "@typescript-eslint/parser": "^5.51.0",
@@ -43,8 +43,8 @@
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "@vitest/coverage-c8": "^0.28.4",
     "@vue/test-utils": "^2.2.10",
-    "commitizen": "^4.3.0",
-    "cz-customizable": "^6.9.2",
+    "commitizen": "^4.2.4",
+    "cz-customizable": "^6.9.0",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-friendly-formatter": "^4.0.1",
@@ -82,7 +82,9 @@
     "vue": "^3.2.0"
   },
   "lint-staged": {
-
+    "*.{js,ts,vue,jsx,tsx}": [
+      "npm run eslint"
+    ],
     "*.{js,jsx,ts,tsx,md,html,css,lees,scss,sass}": "prettier --write"
   },
   "config": {
