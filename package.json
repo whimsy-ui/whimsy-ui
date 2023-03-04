@@ -1,21 +1,33 @@
 {
-  "name": "whimsy",
+  "private": true,
+  "name": "whimsy-ui",
+  "packageManager": "pnpm@7",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "index.ts",
+  "workspaces": [
+    "packages/*",
+    "playground",
+    "docs"
+  ],
+  "engines": {
+    "node": ">= 16"
+  },
   "scripts": {
-    "dev": "pnpm run -C packages/whimsy-ui dev",
-    "build": "pnpm run -C packages/whimsy-ui build",
-    "test": "pnpm run -C packages/whimsy-ui test",
-    "docs:dev": "pnpm run -C packages/docs dev",
-    "docs:build": "pnpm run -C packages/docs build",
+    "dev": "pnpm -C playground dev",
+    "build": "pnpm -C packages/whimsy-ui build",
+    "test": "vitest run",
+    "docs:dev": "pnpm -C docs dev",
+    "docs:build": "pnpm -C docs build",
     "preinstall": "tsx ./scripts/preinstall.ts",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
     "postinstallmac": "git config core.hooksPath .husky && chmod 700 .husky/*",
-    "eslint": "eslint --cache --max-warnings 0  \"packages/**/*.{vue,ts,js,tsx}\" --fix",
+    "eslint": "eslint --cache --max-warnings 0  \"./packages/**/*.{vue,ts,js,tsx}\" --fix",
     "commit": "git add . && git-cz",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
+    "clean:dist": "rimraf dist",
+    "prettier": "prettier \"./packages/**/*.{vue,ts,js,tsx}\" --write"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +37,7 @@
     "@commitlint/config-angular": "^17.4.2",
     "@commitlint/cz-commitlint": "^17.4.2",
     "@iconify-json/ic": "^1.1.12",
+    "@types/node": "^18.14.6",
     "@typescript-eslint/parser": "^5.51.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
@@ -44,27 +57,32 @@
     "lint-staged": "^12.5.0",
     "node-sass": "^8.0.0",
     "prettier": "^2.8.4",
+    "rimraf": "^4.3.0",
     "sass": "^1.58.0",
     "tsx": "^3.12.3",
     "typescript": "^4.9.5",
+    "unbuild": "^1.1.2",
     "unocss": "^0.49.4",
+    "unplugin-vue-setup-extend-plus": "^0.4.9",
     "vite": "^4.1.1",
     "vite-plugin-dts": "^1.7.2",
     "vitest": "^0.28.4",
     "web-norm": "^1.0.27"
   },
   "dependencies": {
+    "@whimsy-ui/components": "workspace:*",
+    "@whimsy-ui/docs": "workspace:*",
+    "@whimsy-ui/hooks": "workspace:*",
+    "@whimsy-ui/playground": "workspace:*",
+    "@whimsy-ui/utils": "workspace:*",
     "vue": "^3.2.47",
-    "whimsy-docs": "workspace:^1.0.0",
-    "whimsy-ui": "workspace:^1.0.0"
+    "whimsy-ui": "workspace:*"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
   },
   "lint-staged": {
-    "*.{js,ts,vue,jsx,tsx}": [
-      "npm run eslint"
-    ],
+
     "*.{js,jsx,ts,tsx,md,html,css,lees,scss,sass}": "prettier --write"
   },
   "config": {

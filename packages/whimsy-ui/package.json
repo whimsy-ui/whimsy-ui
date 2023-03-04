@@ -2,6 +2,7 @@
   "name": "whimsy-ui",
   "version": "1.0.0",
   "description": "组件库",
+  "author": "huangyan321 <1604549268@qq.com>",
   "main": "dist/whimsy-ui.mjs",
   "scripts": {
     "test": "vitest",
@@ -13,6 +14,5 @@
   "peerDependencies": {
     "vue": "^3.2.0"
   },
-  "author": "",
   "license": "ISC"
 }

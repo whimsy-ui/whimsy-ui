@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // 允许外部合并该文件
+    "composite": true,
+    // 指定生成什么模块代码
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    // 指定库声明文件
+    "lib": ["ESNext"],
+    // node环境需要指定node声明文件
+    "types": ["node"],
+    // 跳过所有.d的类型检查。ts文件。
+    "skipLibCheck": true
+  },
+  "include": ["scripts/**/*"]
+}

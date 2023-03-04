@@ -1,0 +1,10 @@
+{
+  "name": "@whimsy-ui/hooks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "huangyan321 <1604549268@qq.com>",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "license": "ISC"
+}

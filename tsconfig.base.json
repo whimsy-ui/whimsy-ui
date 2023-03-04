@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    // 类型文件输出文件夹
+    "outDir": "dist",
+    // 输出文件提供指定js版本兼容类型声明
+    "target": "ESNext",
+    // 指定生成什么模块代码
+    "module": "ESNext",
+    // 指定根目录用来解析非相对模块名
+    "baseUrl": ".",
+    // 是否输出sourcemap
+    "sourceMap": false,
+    // 指定模块查找逻辑，参考 https://pengfeixc.com/blogs/javascript/typescript-module-system
+    "moduleResolution": "node",
+    // 允许js成为程序一部分
+    "allowJs": false,
+    // 启用严格检查
+    "strict": true,
+    // 未读取变量时报错
+    "noUnusedLocals": true,
+    // 允许导入json文件
+    "resolveJsonModule": true,
+    // 当模块没有默认导出时，允许“import x from y”
+    "allowSyntheticDefaultImports": true,
+    // 生成额外的JavaScript以简化对导入CommonJS模块的支持
+    "esModuleInterop": true,
+    // 是否移除注释
+    "removeComments": false,
+    // 是否生成类型声明文件
+    "noEmit": true,
+    // 指定根文件夹
+    "rootDir": ".",
+    // 指定要包含的类型包名，而不用在文件中引用
+    "types": [],
+    // 引导索引 用于查找文件
+    "paths": {
+      "@whimsy-ui/*": ["packages/*"]
+    }
+  }
+}

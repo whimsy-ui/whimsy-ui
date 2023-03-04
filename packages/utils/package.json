@@ -1,0 +1,9 @@
+{
+  "name": "@whimsy-ui/utils",
+  "private": true,
+  "main": "index.ts",
+  "author": "huangyan321 <1604549268@qq.com>",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "preserve",
+    "lib": ["ES2018", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "types": ["vite/client"]
+  },
+  "include": ["packages", "typings/components.d.ts", "typings/env.d.ts"],
+  // 跳过以下文件的类型检查
+  "exclude": ["node_modules", "**/dist", "**/__tests__/**/*", "**/gulpfile.ts", "**/test-helper", "packages/test-utils", "**/*.md"]
+}
