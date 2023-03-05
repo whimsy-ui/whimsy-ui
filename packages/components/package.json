@@ -2,13 +2,28 @@
   "name": "@whimsy-ui/components",
   "version": "0.0.5",
   "description": "all components are settled here",
-  "main": "index.ts",
-  "module": "index.ts",
+  "author": "huangyan321 <1604549268@qq.com>",
   "unpkg": "index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub"
+  },
   "peerDependencies": {
     "vue": "^3.2.0"
   },
-  "types": "index.d.ts",
-  "sideEffects": false,
-  "dependencies": {}
+  "sideEffects": false
 }

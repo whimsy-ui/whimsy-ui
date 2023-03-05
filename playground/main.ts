@@ -11,7 +11,7 @@ import 'whimsy-ui/dist/index.css';
     window.location.pathname = 'App';
     return;
   }
-  const App = (await file()).default;
+  const App = ((await file()) as any).default;
 
   createApp(App).use(WhimsyUI).mount('#play');
 })();

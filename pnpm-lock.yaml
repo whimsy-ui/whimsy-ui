@@ -4,45 +4,46 @@ importers:
 
   .:
     specifiers:
-      '@commitlint/cli': ^17.0.3
-      '@commitlint/config-angular': ^17.0.3
-      '@commitlint/cz-commitlint': ^17.0.3
-      '@iconify-json/ic': ^1.1.12
+      '@commitlint/cli': ^17.4.4
+      '@commitlint/config-angular': ^17.4.4
+      '@commitlint/cz-commitlint': ^17.4.4
+      '@iconify-json/ic': ^1.1.13
       '@types/node': ^18.14.6
-      '@typescript-eslint/parser': ^5.51.0
+      '@typescript-eslint/parser': ^5.54.0
       '@vitejs/plugin-vue': ^4.0.0
       '@vitejs/plugin-vue-jsx': ^3.0.0
-      '@vitest/coverage-c8': ^0.28.4
-      '@vue/test-utils': ^2.2.10
+      '@vitest/coverage-c8': ^0.28.5
+      '@vue/test-utils': ^2.3.0
       '@whimsy-ui/components': workspace:*
       '@whimsy-ui/docs': workspace:*
       '@whimsy-ui/hooks': workspace:*
       '@whimsy-ui/playground': workspace:*
       '@whimsy-ui/utils': workspace:*
-      commitizen: ^4.2.4
-      cz-customizable: ^6.9.0
+      commitizen: ^4.3.0
+      consola: ^2.15.3
+      cz-customizable: ^6.9.2
       eslint: ^8.35.0
       eslint-config-prettier: ^8.6.0
       eslint-friendly-formatter: ^4.0.1
       eslint-plugin-html: ^6.2.0
       eslint-plugin-prettier: ^4.2.1
       eslint-plugin-vue: ^9.9.0
-      happy-dom: ^8.2.6
+      happy-dom: ^8.9.0
       husky: ^8.0.3
       inquirer: ^8.2.5
       lint-staged: ^12.5.0
       node-sass: ^8.0.0
       prettier: ^2.8.4
       rimraf: ^4.3.0
-      sass: ^1.58.0
+      sass: ^1.58.3
       tsx: ^3.12.3
       typescript: ^4.9.5
       unbuild: ^1.1.2
-      unocss: ^0.49.4
+      unocss: ^0.49.8
       unplugin-vue-setup-extend-plus: ^0.4.9
-      vite: ^4.1.1
-      vite-plugin-dts: ^1.7.2
-      vitest: ^0.28.4
+      vite: ^4.1.4
+      vite-plugin-dts: ^1.7.3
+      vitest: ^0.28.5
       vue: ^3.2.47
       web-norm: ^1.0.27
       whimsy-ui: workspace:*
@@ -66,6 +67,7 @@ importers:
       '@vitest/coverage-c8': 0.28.5_zcjcryjt4bqcdu7ggonulipgea
       '@vue/test-utils': 2.3.0_vue@3.2.47
       commitizen: 4.3.0
+      consola: 2.15.3
       cz-customizable: 6.9.2
       eslint: 8.35.0
       eslint-config-prettier: 8.6.0_eslint@8.35.0
@@ -1679,7 +1681,6 @@ packages:
 
   /@types/node/18.14.6:
     resolution: {integrity: sha512-93+VvleD3mXwlLI/xASjw0FzKcwzl3OdTCzm1LaRfqgS21gfFtK3zDXM5Op9TeeMsJVOaJ2VRDpT9q4Y3d0AvA==}
-    dev: true
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -1938,7 +1939,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.1.4
+      vite: 4.1.4_tbu6ibuzbmq2zng52hwcifltki
       vue: 3.2.47
 
   /@vitest/coverage-c8/0.28.5_zcjcryjt4bqcdu7ggonulipgea:
@@ -2425,7 +2426,6 @@ packages:
     dependencies:
       normalize-path: 3.0.0
       picomatch: 2.3.1
-    dev: true
 
   /aproba/2.0.0:
     resolution: {integrity: sha512-lYe4Gx7QT+MKGbDsA+Z+he/Wtef0BiwDOlK/XkBrdfsh9J/jPPXbX0tE9x9cl27Tmu5gg3QUbUrQYa/y+KOHPQ==}
@@ -2494,7 +2494,6 @@ packages:
   /binary-extensions/2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
-    dev: true
 
   /bl/4.1.0:
     resolution: {integrity: sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==}
@@ -2632,7 +2631,7 @@ packages:
       fs-minipass: 2.1.0
       glob: 8.1.0
       infer-owner: 1.0.4
-      lru-cache: 7.18.1
+      lru-cache: 7.18.2
       minipass: 3.3.6
       minipass-collect: 1.0.2
       minipass-flush: 1.0.5
@@ -2736,7 +2735,6 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
 
   /chownr/2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
@@ -3859,7 +3857,7 @@ packages:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.1.2
+      minimatch: 3.0.8
       once: 1.4.0
       path-is-absolute: 1.0.1
     dev: true
@@ -4146,7 +4144,6 @@ packages:
 
   /immutable/4.2.4:
     resolution: {integrity: sha512-WDxL3Hheb1JkRN3sQkyujNlL/xRjAo3rJtaU5xeufUauG66JdMr32bLj4gF+vWl84DIA3Zxw7tiAjneYzRRw+w==}
-    dev: true
 
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
@@ -4243,7 +4240,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       binary-extensions: 2.2.0
-    dev: true
 
   /is-builtin-module/3.2.1:
     resolution: {integrity: sha512-BSLE3HnV2syZ0FK0iMA/yUGplUeMmNz4AW5fnTunbCIqZi4vG3WjJT9FHMy5D69xmAYBHXQhJdALdpwVxV501A==}
@@ -4689,8 +4685,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /lru-cache/7.18.1:
-    resolution: {integrity: sha512-8/HcIENyQnfUTCDizRu9rrDyG6XG/21M4X7/YEGZeD76ZJilFPAUVb/2zysFf7VVO1LEjCDFyHp8pMMvozIrvg==}
+  /lru-cache/7.18.2:
+    resolution: {integrity: sha512-KytVYmZ3reaw/f3d7GCISvWWjTYxszNdvD5rDvm/zECga3eSWzryRY7iauJsjo6aaw03lHYTSNTk7lW83Bv+zQ==}
     engines: {node: '>=12'}
     dev: true
 
@@ -4741,7 +4737,7 @@ packages:
       http-proxy-agent: 5.0.0
       https-proxy-agent: 5.0.1
       is-lambda: 1.0.1
-      lru-cache: 7.18.1
+      lru-cache: 7.18.2
       minipass: 3.3.6
       minipass-collect: 1.0.2
       minipass-fetch: 2.1.2
@@ -5206,7 +5202,6 @@ packages:
   /normalize-path/3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /npm-run-path/4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
@@ -5395,7 +5390,7 @@ packages:
     resolution: {integrity: sha512-OW+5s+7cw6253Q4E+8qQ/u1fVvcJQCJo/VFD8pje+dbJCF1n5ZRMV2AEHbGp+5Q7jxQIYJxkHopnj6nzdGeZLA==}
     engines: {node: '>=14'}
     dependencies:
-      lru-cache: 7.18.1
+      lru-cache: 7.18.2
       minipass: 4.2.4
     dev: true
 
@@ -5600,7 +5595,6 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
-    dev: true
 
   /redent/3.0.0:
     resolution: {integrity: sha512-6tDA8g98We0zd0GvVeMT9arEOnTw9qM03L9cJXaCjrip1OO764RDBLBfrB4cwzNGDj5OA5ioymC9GkizgWJDUg==}
@@ -5791,7 +5785,6 @@ packages:
       chokidar: 3.5.3
       immutable: 4.2.4
       source-map-js: 1.0.2
-    dev: true
 
   /scss-tokenizer/0.4.3:
     resolution: {integrity: sha512-raKLgf1LI5QMQnG+RxHz6oK0sL3x3I4FN2UDLqgLOGO8hodECNnNh5BXn7fAyBxrA8zVzdQizQ6XjNJQ+uBwMw==}
@@ -6734,7 +6727,6 @@ packages:
       sass: 1.58.3
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
 
   /vitepress-theme-demoblock/2.0.2:
     resolution: {integrity: sha512-jisyN5zvc7muluEvshSuworGXBmfgCptgBGua8PqGOsfAw473UQ6C1g8/C9JRdAe6io7y1/xa3sNLwp8Ey1KWw==}
