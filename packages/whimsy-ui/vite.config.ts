@@ -32,7 +32,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions,
-    minify: 'esbuild',
+    minify: esbuild,
     sourcemap: true,
     cssCodeSplit: true,
     lib: {
@@ -40,13 +40,10 @@ export default defineConfig({
       name: 'WhimsyUI',
       fileName: 'whimsy-ui',
       // 导出模块格式
-      formats: ['es', 'umd', 'iife']
+      formats: ['es', 'umd', 'iife', 'cjs']
     }
   },
   resolve: {
-    alias: {
-      root: process.cwd(),
-      '@': process.cwd() + '/src'
-    }
+    alias: {}
   }
 });

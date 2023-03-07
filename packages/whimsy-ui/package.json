@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "组件库",
   "author": "huangyan321 <1604549268@qq.com>",
-  "main": "index.ts",
+  "main": "./dist/whimsy-ui.mjs",
   "scripts": {
-    "build": "vite"
+    "dev": "vite",
+    "build": "vite build"
   },
   "peerDependencies": {
     "vue": "^3.2.0"

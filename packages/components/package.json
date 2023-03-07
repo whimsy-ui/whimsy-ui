@@ -8,5 +8,5 @@
   "peerDependencies": {
     "vue": "^3.2.0"
   },
-  "sideEffects": false
+  "sideEffects": true
 }

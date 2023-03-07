@@ -1,6 +1,5 @@
 import { createApp } from 'vue';
 // @ts-ignore
-import WhimsyUI from 'whimsy-ui';
 import 'whimsy-ui/dist/index.css';
 (async () => {
   const apps = import.meta.glob('./src/*.vue');
@@ -13,5 +12,5 @@ import 'whimsy-ui/dist/index.css';
   }
   const App = ((await file()) as any).default;
 
-  createApp(App).use(WhimsyUI).mount('#play');
+  createApp(App).mount('#play');
 })();

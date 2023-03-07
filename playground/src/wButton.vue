@@ -1,5 +1,6 @@
 <template>
   <div class="play-container">
+    <div>123</div>
     <ws-button color="gray">ws-button</ws-button>
   </div>
 </template>

@@ -2,6 +2,7 @@
 import { type App } from 'vue';
 import { WsButton, WsWaterfall } from '@whimsy-ui/components';
 export { WsButton, WsWaterfall };
+export { WhimsyResolver } from './resolver';
 import 'uno.css';
 
 export default {
