@@ -59,16 +59,8 @@ export function WhimsyResolver(options: WhimsyResolverOptions): ComponentResolve
   return [
     {
       type: 'component',
-      resolve: (name: string) => {
-        const option = {
-          ssr: false,
-          version: '1.1.1',
-          importStyle: 'css',
-          directives: true,
-          exclude: undefined,
-          noStylesComponents: options.noStylesComponents || [],
-          ...options
-        };
+      resolve: async (name: string) => {
+        const option = await resolveOptions();
 
         if (option.noStylesComponents.includes(name)) {
           return resolveComponent(name, { ...option, importStyle: false });

@@ -32,7 +32,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions,
-    minify: esbuild,
+    minify: 'esbuild',
     sourcemap: true,
     cssCodeSplit: true,
     lib: {
