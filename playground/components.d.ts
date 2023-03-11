@@ -9,6 +9,6 @@ export {};
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    WsButton: typeof import('whimsy-ui/dist/whimsy-ui.mjs')['WsButton'];
+    WsButton: typeof import('whimsy-ui/es')['WsButton'];
   }
 }

@@ -1,38 +1,25 @@
 <template>
-  <button
-    :class="[
-      `py-${size[props.size].y}`,
-      `px-${size[props.size].x}`,
-      `${props.round ? 'rounded-full' : 'rounded-lg'}`,
-      `bg-${props.color}-${props.plain ? '100' : '500'}`,
-      `hover:bg-${props.color}-400`,
-      `border-${props.color}-${props.plain ? '500' : '500'}`,
-      `cursor-pointer`,
-      `border-solid`,
-      `border-1`,
-      `text-${props.plain ? props.color + '-500' : 'white'}`,
-      `transition duration-100`,
-      `mx-1`
-    ]"
-  >
+  <button :class="[ns.b(), ns.m(_size), ns.is('plain', plain), ns.is('round', round)]" @click="handleClick">
     <i v-if="props.icon" :class="[`i-ic-baseline-${props.icon} p-3`]"></i>
     <slot v-if="$slots.default"></slot>
   </button>
 </template>
 <script setup lang="ts" name="WsButton">
-import { size } from './button';
-export interface IProps {
-  size: 'small' | 'medium' | 'large';
-  color: 'gray' | 'red' | 'yellow' | 'green' | 'blue' | 'indigo' | 'purple' | 'pink' | 'white';
-  round: boolean;
-  plain: boolean;
-  icon: string;
-}
+import { size, buttonProps, buttonEmits } from './button';
+import { useNamespace } from '@whimsy-ui/hooks';
+import useButton from './use-button';
+import '@whimsy-ui/themes/src/button.scss';
+const props = defineProps(buttonProps);
+const emits = defineEmits(buttonEmits);
+const ns = useNamespace('button');
+const { _size, _color, _ref, handleClick } = useButton(props, emits);
 
-const props = withDefaults(defineProps<IProps>(), {
-  size: 'medium',
-  color: 'white',
-  round: false,
-  plain: false
+defineExpose({
+  /** @description button html element */
+  ref: _ref,
+  /** @description button size */
+  size: _size,
+  /** @description button color */
+  color: _color
 });
 </script>

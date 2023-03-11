@@ -42,8 +42,5 @@ export default defineConfig({
       // 导出模块格式
       formats: ['es', 'umd', 'iife', 'cjs']
     }
-  },
-  resolve: {
-    alias: {}
   }
 });

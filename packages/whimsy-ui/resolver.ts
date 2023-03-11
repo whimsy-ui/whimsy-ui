@@ -77,6 +77,6 @@ function resolveComponent(name: string, options: WhimsyResolverOptionsResolved):
 
   return {
     name,
-    from: 'whimsy-ui/dist/whimsy-ui.mjs'
+    from: 'whimsy-ui/es'
   };
 }

@@ -1,3 +1,5 @@
+import type { ExtractPropTypes } from 'vue';
+
 export const size = {
   small: {
     x: '2',
@@ -15,3 +17,25 @@ export const size = {
     text: 'lg'
   }
 };
+const sizeValues = ['small', 'medium', 'large'];
+const colorValues = ['gray', 'red', 'yellow', 'green', 'blue', 'indigo', 'purple', 'pink'];
+export const buttonProps = {
+  size: {
+    type: String,
+    values: sizeValues,
+    default: 'medium'
+  },
+  color: {
+    type: String,
+    values: colorValues,
+    default: 'gray'
+  },
+  round: Boolean,
+  plain: Boolean,
+  icon: String
+};
+export const buttonEmits = {
+  click: (evt: MouseEvent) => evt instanceof MouseEvent
+};
+export type ButtonProps = ExtractPropTypes<typeof buttonProps>;
+export type ButtonEmits = typeof buttonEmits;

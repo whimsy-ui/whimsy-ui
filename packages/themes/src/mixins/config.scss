@@ -1,0 +1,7 @@
+// 变量后加入 !default 表示默认值
+
+$namespace: 'ws' !default; // 所有的组件以ws开头，如 ws-input
+$common-separator: '-' !default; // 公共的连接符
+$element-separator: '__' !default; // 元素以__分割，如 ws-input__inner
+$modifier-separator: '--' !default; // 修饰符以--分割，如 ws-input--mini
+$state-prefix: 'is-' !default; // 状态以is-开头，如 is-disabled

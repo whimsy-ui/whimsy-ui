@@ -14,10 +14,12 @@ importers:
       '@vitejs/plugin-vue-jsx': ^3.0.0
       '@vitest/coverage-c8': ^0.28.5
       '@vue/test-utils': ^2.3.0
+      '@whimsy-ui/build-utils': workspace:*
       '@whimsy-ui/components': workspace:*
       '@whimsy-ui/docs': workspace:*
       '@whimsy-ui/hooks': workspace:*
       '@whimsy-ui/playground': workspace:*
+      '@whimsy-ui/themes': workspace:*
       '@whimsy-ui/utils': workspace:*
       commitizen: ^4.3.0
       consola: ^2.15.3
@@ -39,7 +41,6 @@ importers:
       sass: ^1.58.3
       tsx: ^3.12.3
       typescript: ^4.9.5
-      unbuild: ^0.7.4
       unocss: ^0.49.8
       unplugin-vue-components: ^0.24.0
       unplugin-vue-setup-extend-plus: ^0.4.9
@@ -50,10 +51,12 @@ importers:
       web-norm: ^1.0.27
       whimsy-ui: workspace:*
     dependencies:
+      '@whimsy-ui/build-utils': link:internal/build-utils
       '@whimsy-ui/components': link:packages/components
       '@whimsy-ui/docs': link:docs
       '@whimsy-ui/hooks': link:packages/hooks
       '@whimsy-ui/playground': link:playground
+      '@whimsy-ui/themes': link:packages/themes
       '@whimsy-ui/utils': link:packages/utils
       vue: 3.2.47
       whimsy-ui: link:packages/whimsy-ui
@@ -88,7 +91,6 @@ importers:
       sass: 1.58.3
       tsx: 3.12.3
       typescript: 4.9.5
-      unbuild: 0.7.6
       unocss: 0.49.8_vite@4.1.4
       unplugin-vue-components: 0.24.0_vue@3.2.47
       unplugin-vue-setup-extend-plus: 0.4.9
@@ -108,13 +110,19 @@ importers:
     devDependencies:
       vitepress: 1.0.0-alpha.40
 
+  internal/build-utils:
+    specifiers:
+      unbuild: ^0.7.4
+    devDependencies:
+      unbuild: 0.7.6
+
   packages/components:
     specifiers: {}
 
   packages/hooks:
     specifiers: {}
 
-  packages/presets:
+  packages/themes:
     specifiers: {}
 
   packages/utils:
@@ -131,10 +139,8 @@ importers:
       vite: ^4.1.0
       vue: ^3.2.45
       vue-tsc: ^1.0.24
-      whimsy-ui: workspace:*
     dependencies:
       vue: 3.2.47
-      whimsy-ui: link:../packages/whimsy-ui
     devDependencies:
       '@vitejs/plugin-vue': 4.0.0_vite@4.1.4+vue@3.2.47
       typescript: 4.9.5
@@ -1687,6 +1693,7 @@ packages:
 
   /@types/node/18.14.6:
     resolution: {integrity: sha512-93+VvleD3mXwlLI/xASjw0FzKcwzl3OdTCzm1LaRfqgS21gfFtK3zDXM5Op9TeeMsJVOaJ2VRDpT9q4Y3d0AvA==}
+    dev: true
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -1947,7 +1954,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.1.4_tbu6ibuzbmq2zng52hwcifltki
+      vite: 4.1.4
       vue: 3.2.47
 
   /@vitest/coverage-c8/0.28.5_zcjcryjt4bqcdu7ggonulipgea:
@@ -2434,6 +2441,7 @@ packages:
     dependencies:
       normalize-path: 3.0.0
       picomatch: 2.3.1
+    dev: true
 
   /aproba/2.0.0:
     resolution: {integrity: sha512-lYe4Gx7QT+MKGbDsA+Z+he/Wtef0BiwDOlK/XkBrdfsh9J/jPPXbX0tE9x9cl27Tmu5gg3QUbUrQYa/y+KOHPQ==}
@@ -2502,6 +2510,7 @@ packages:
   /binary-extensions/2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
+    dev: true
 
   /bl/4.1.0:
     resolution: {integrity: sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==}
@@ -2743,6 +2752,7 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
 
   /chownr/2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
@@ -4369,6 +4379,7 @@ packages:
 
   /immutable/4.2.4:
     resolution: {integrity: sha512-WDxL3Hheb1JkRN3sQkyujNlL/xRjAo3rJtaU5xeufUauG66JdMr32bLj4gF+vWl84DIA3Zxw7tiAjneYzRRw+w==}
+    dev: true
 
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
@@ -4465,6 +4476,7 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       binary-extensions: 2.2.0
+    dev: true
 
   /is-builtin-module/3.2.1:
     resolution: {integrity: sha512-BSLE3HnV2syZ0FK0iMA/yUGplUeMmNz4AW5fnTunbCIqZi4vG3WjJT9FHMy5D69xmAYBHXQhJdALdpwVxV501A==}
@@ -5437,6 +5449,7 @@ packages:
   /normalize-path/3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
+    dev: true
 
   /npm-run-path/4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
@@ -5846,6 +5859,7 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
+    dev: true
 
   /redent/3.0.0:
     resolution: {integrity: sha512-6tDA8g98We0zd0GvVeMT9arEOnTw9qM03L9cJXaCjrip1OO764RDBLBfrB4cwzNGDj5OA5ioymC9GkizgWJDUg==}
@@ -6062,6 +6076,7 @@ packages:
       chokidar: 3.5.3
       immutable: 4.2.4
       source-map-js: 1.0.2
+    dev: true
 
   /scss-tokenizer/0.4.3:
     resolution: {integrity: sha512-raKLgf1LI5QMQnG+RxHz6oK0sL3x3I4FN2UDLqgLOGO8hodECNnNh5BXn7fAyBxrA8zVzdQizQ6XjNJQ+uBwMw==}
@@ -7024,6 +7039,7 @@ packages:
       sass: 1.58.3
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
 
   /vitepress-theme-demoblock/2.0.2:
     resolution: {integrity: sha512-jisyN5zvc7muluEvshSuworGXBmfgCptgBGua8PqGOsfAw473UQ6C1g8/C9JRdAe6io7y1/xa3sNLwp8Ey1KWw==}
