@@ -1,0 +1,23 @@
+{
+  "name": "@whimsy-ui/build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@esbuild-kit/cjs-loader": "^2.4.2",
+    "unbuild": "^1.1.2",
+    "vue": "^3.2.45"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}

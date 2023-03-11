@@ -5,6 +5,7 @@ import { WhimsyResolver } from 'whimsy-ui';
 import path from 'path';
 import buildUtils from '@whimsy-ui/build-utils';
 const { wsRoot } = buildUtils;
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
