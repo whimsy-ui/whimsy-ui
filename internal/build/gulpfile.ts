@@ -1,9 +1,9 @@
 import path from 'path';
 
-import { series } from 'gulp';
+import { series, parallel } from 'gulp';
 import { copyFile, mkdir } from 'fs/promises';
 
-import { withTaskName, run } from './src';
+import { withTaskName, run, runTask } from './src';
 
 import { buildOutput, wsOutput, projRoot } from '@whimsy-ui/build-utils';
 
@@ -20,10 +20,11 @@ export default series(
       recursive: true
     })
   ),
-  series(
-    withTaskName('buildThemeChalk', () => run('pnpm run -C packages/themes build')),
-    copyFullStyle
-  )
+  parallel(runTask('buildModules'))
+  // series(
+  //   withTaskName('buildThemeChalk', () => run('pnpm run -C packages/themes build')),
+  //   copyFullStyle
+  // )
 );
 
 export * from './src';

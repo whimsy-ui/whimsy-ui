@@ -1,6 +1,6 @@
 import { defineComponent, PropType, Teleport, ref, onMounted, type TeleportProps, toRefs, watch } from 'vue';
 import WaterfallItem from './waterfallItem';
-import '../style/index.scss';
+// import '../style/index.scss';
 import { IImage } from './type';
 import { useWindowSize } from '@whimsy-ui/hooks';
 export const waterfallProps: {
