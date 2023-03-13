@@ -4,8 +4,7 @@
     "composite": true,
     "jsx": "preserve",
     "lib": ["ES2018", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
-    "types": ["vite/client"]
+    "skipLibCheck": true
   },
   "include": ["packages", "typings/components.d.ts", "typings/env.d.ts"],
   // 跳过以下文件的类型检查

@@ -6,8 +6,13 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import esbuild from 'rollup-plugin-esbuild';
 import glob from 'fast-glob';
-import { pkgRoot, excludeFiles } from '@whimsy-ui/build-utils';
+import { pkgRoot, excludeFiles, wsRoot } from '@whimsy-ui/build-utils';
+import { writeBundles, generateExternal } from '../utils';
+import { buildConfig, buildConfigEntries, target } from '../build-config';
 import { WhimsyAlias } from '../plugins/whimsy-alias';
+
+import type { OutputOptions } from 'rollup';
+
 export const buildModules = async () => {
   const input = excludeFiles(
     await glob('**/*.{js,ts,vue}', {
@@ -16,8 +21,6 @@ export const buildModules = async () => {
       onlyFiles: true
     })
   );
-  console.log(input);
-
   const bundle = await rollup({
     input,
     plugins: [
@@ -33,18 +36,34 @@ export const buildModules = async () => {
         }
       }),
       nodeResolve({
+        preferBuiltins: true,
+        mainFields: ['browser'],
         extensions: ['.mjs', '.js', '.json', '.ts']
       }),
       commonjs(),
       esbuild({
         sourceMap: true,
-        target: 'es2018',
+        target: 'es2020',
         loaders: {
           '.vue': 'ts'
         }
       })
     ],
-    treeshake: false
+    treeshake: false,
+    external: await generateExternal({ full: false })
   });
-  console.log(bundle);
+  await writeBundles(
+    bundle,
+    buildConfigEntries.map(([module, config]): OutputOptions => {
+      return {
+        format: config.format,
+        dir: config.output.path,
+        exports: module === 'cjs' ? 'named' : undefined,
+        preserveModules: true,
+        preserveModulesRoot: wsRoot,
+        sourcemap: true,
+        entryFileNames: `[name].${config.ext}`
+      };
+    })
+  );
 };

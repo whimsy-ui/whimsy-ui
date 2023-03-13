@@ -26,3 +26,5 @@ export const utilRoot = resolve(pkgRoot, 'utils');
 export const buildOutput = resolve(projRoot, 'dist');
 // 组件源码目录 dist/whimsy-ui
 export const wsOutput = resolve(buildOutput, 'whimsy-ui');
+// wsPkg
+export const wsPkg = resolve(wsRoot, 'package.json');

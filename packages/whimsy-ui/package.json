@@ -1,9 +1,25 @@
 {
   "name": "whimsy-ui",
-  "version": "1.0.0",
-  "description": "组件库",
+  "version": "1.0.1",
+  "description": "Component Library for Vue 3",
   "author": "huangyan321 <1604549268@qq.com>",
-  "main": "./dist/whimsy-ui.mjs",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "types": "es/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.mjs",
+      "require": "./lib/index.js"
+    },
+    "./es": "./es/index.mjs",
+    "./lib": "./lib/index.js",
+    "./es/*.mjs": "./es/*.mjs",
+    "./es/*": "./es/*.mjs",
+    "./lib/*.js": "./lib/*.js",
+    "./lib/*": "./lib/*.js",
+    "./*": "./*"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build"
@@ -11,5 +27,16 @@
   "peerDependencies": {
     "vue": "^3.2.0"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "unocss": "^0.50.4",
+    "vue": "^3.2.45"
+  },
+  "browserslist": [
+    "> 1%",
+    "not ie 11",
+    "not op_mini all"
+  ]
 }

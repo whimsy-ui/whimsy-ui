@@ -28,6 +28,7 @@
     "gulp": "^4.0.2",
     "rollup": "^2.75.7",
     "rollup-plugin-esbuild": "^4.9.1",
+    "ts-morph": "^17.0.1",
     "unplugin-vue-macros": "^0.11.2"
   }
 }

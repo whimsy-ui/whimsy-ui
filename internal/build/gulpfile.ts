@@ -20,7 +20,7 @@ export default series(
       recursive: true
     })
   ),
-  parallel(runTask('buildModules'))
+  parallel(runTask('buildModules'), runTask('buildFullBundle'), runTask('generateTypesDefinitions'))
   // series(
   //   withTaskName('buildThemeChalk', () => run('pnpm run -C packages/themes build')),
   //   copyFullStyle
