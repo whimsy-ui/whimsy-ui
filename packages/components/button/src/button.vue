@@ -3,12 +3,15 @@
     <i v-if="props.icon" :class="[`i-ic-baseline-${props.icon} p-3`]"></i>
     <slot v-if="$slots.default"></slot>
   </button>
+  <el-button>你好</el-button>
 </template>
 <script setup lang="ts" name="WsButton">
-import { size, buttonProps, buttonEmits } from './button';
+import { buttonProps, buttonEmits } from './button';
 import { useNamespace } from '@whimsy-ui/hooks';
 import useButton from './use-button';
 import '@whimsy-ui/themes/src/button.scss';
+import 'element-plus/es/components/button/style/css';
+import { ElButton } from 'element-plus';
 const props = defineProps(buttonProps);
 const emits = defineEmits(buttonEmits);
 const ns = useNamespace('button');

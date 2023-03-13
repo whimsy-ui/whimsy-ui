@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 // @ts-ignore
-import 'whimsy-ui/dist/index.css';
+// import 'whimsy-ui/dist/index.css';
 (async () => {
   const apps = import.meta.glob('./src/*.vue');
   const name = window.location.pathname.replace(/^\//, '') || 'App';

@@ -29,6 +29,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "element-plus": "^2.3.0",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "unocss": "^0.50.4",

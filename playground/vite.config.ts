@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import Components from 'unplugin-vue-components/vite';
-import { WhimsyResolver } from 'whimsy-ui';
+// @ts-ignore
+import { WhimsyResolver } from '../dist/whimsy-ui/es/resolver.mjs';
 import path from 'path';
 import buildUtils from '@whimsy-ui/build-utils';
 const { wsRoot } = buildUtils;
