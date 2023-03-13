@@ -10,7 +10,6 @@ import { buttonProps, buttonEmits } from './button';
 import { useNamespace } from '@whimsy-ui/hooks';
 import useButton from './use-button';
 import '@whimsy-ui/themes/src/button.scss';
-import 'element-plus/es/components/button/style/css';
 import { ElButton } from 'element-plus';
 const props = defineProps(buttonProps);
 const emits = defineEmits(buttonEmits);
