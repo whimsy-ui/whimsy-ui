@@ -1,9 +1,8 @@
 {
   "private": true,
   "name": "whimsy-ui",
-  "packageManager": "pnpm@7.27.0",
+  "packageManager": "pnpm@7.3.0",
   "version": "1.0.0",
-  "main": "index.ts",
   "workspaces": [
     "packages/*",
     "playground",
@@ -29,7 +28,14 @@
     "test:run": "vitest run",
     "stub": "pnpm run -r --parallel stub",
     "prettier": "prettier \"./packages/**/*.{vue,ts,js,tsx}\" --write",
-    "postinstall": "pnpm stub"
+    "postinstall": "pnpm stub",
+    "typecheck": "run-p typecheck:web typecheck:play typecheck:node",
+    "typecheck:web": "vue-tsc -p tsconfig.web.json --composite false --noEmit",
+    "typecheck:node": "tsc -p tsconfig.node.json --noEmit",
+    "typecheck:play": "vue-tsc -p tsconfig.play.json --composite false --noEmit"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
   },
   "keywords": [],
   "author": "",
@@ -43,13 +49,14 @@
     "@types/gulp": "^4.0.10",
     "@types/gulp-clean-css": "^4.3.0",
     "@types/gulp-sass": "^5.0.0",
-    "@types/node": "^18.15.0",
+    "@types/node": "*",
     "@types/undertaker": "^1.2.8",
     "@typescript-eslint/parser": "^5.54.1",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "@vitest/coverage-c8": "^0.28.5",
-    "@vue/test-utils": "^2.3.1",
+    "@vue/tsconfig": "^0.1.3",
+    "chalk": "^5.2.0",
     "commitizen": "^4.3.0",
     "consola": "^2.15.3",
     "cz-customizable": "^6.9.2",
@@ -69,28 +76,28 @@
     "rimraf": "^4.4.0",
     "sass": "^1.59.2",
     "tsx": "^3.12.4",
-    "typescript": "^4.9.5",
+    "typescript": "^4.5.2",
     "unplugin-vue-components": "^0.24.1",
+    "unplugin-vue-macros": "^0.11.2",
     "unplugin-vue-setup-extend-plus": "^0.4.9",
     "vite": "^4.1.0",
     "vite-plugin-dts": "^1.7.3",
     "vitest": "^0.28.5",
+    "vue": "^3.2.37",
+    "vue-tsc": "^1.0.24",
     "web-norm": "^1.0.27"
   },
   "dependencies": {
     "@whimsy-ui/build-utils": "workspace:*",
     "@whimsy-ui/components": "workspace:*",
+    "@whimsy-ui/constants": "workspace:*",
     "@whimsy-ui/docs": "workspace:*",
     "@whimsy-ui/hooks": "workspace:*",
     "@whimsy-ui/playground": "workspace:*",
     "@whimsy-ui/themes": "workspace:*",
     "@whimsy-ui/utils": "workspace:*",
     "element-plus": "^2.3.0",
-    "vue": "^3.2.47",
     "whimsy-ui": "workspace:*"
-  },
-  "peerDependencies": {
-    "vue": "^3.2.0"
   },
   "lint-staged": {
     "*.{js,ts,vue,jsx,tsx}": [
@@ -101,6 +108,15 @@
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "vite",
+        "react",
+        "react-dom"
+      ]
     }
   }
 }

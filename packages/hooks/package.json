@@ -1,8 +1,10 @@
 {
   "name": "@whimsy-ui/hooks",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
+  "module": "index.ts",
   "author": "huangyan321 <1604549268@qq.com>",
+  "types": "index.d.ts",
   "peerDependencies": {
     "vue": "^3.2.0"
   },

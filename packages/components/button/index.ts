@@ -1,5 +1,5 @@
 import WsButton from './src/button.vue';
-import { App } from 'vue';
+import type { App } from 'vue';
 // 导出Button组件
 export { WsButton };
 

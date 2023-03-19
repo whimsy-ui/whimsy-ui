@@ -32,8 +32,11 @@
     "element-plus": "^2.3.0",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
-    "unocss": "^0.50.4",
-    "vue": "^3.2.45"
+    "unocss": "^0.50.4"
+  },
+  "devDependencies": {
+    "vue": "^3.2.37",
+    "@types/node": "*"
   },
   "browserslist": [
     "> 1%",

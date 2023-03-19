@@ -1,8 +1,15 @@
 import { defineComponent, PropType, Teleport, ref, onMounted, type TeleportProps, toRefs, watch } from 'vue';
 import WaterfallItem from './waterfallItem';
 // import '../style/index.scss';
-import { IImage } from './type';
 import { useWindowSize } from '@whimsy-ui/hooks';
+export interface IImage {
+  url: string;
+  width: number | string;
+  height: number | string;
+  top: number | string;
+  left: number | string;
+}
+
 export const waterfallProps: {
   column: PropType<number>;
   gap: PropType<number>;

@@ -7,15 +7,15 @@
     "start": "gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts"
   },
   "peerDependencies": {
-    "vue": "^3.2.0"
+    "vue": "^3.2.25"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@esbuild-kit/cjs-loader": "^2.4.2",
+    "@esbuild-kit/cjs-loader": "^2.2.1",
     "unbuild": "^1.1.2",
-    "vue": "^3.2.45"
+    "vue": "^3.2.37"
   },
   "dependencies": {
     "@rollup/plugin-commonjs": "^22.0.1",

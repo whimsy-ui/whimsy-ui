@@ -3,10 +3,11 @@
   "version": "0.0.5",
   "description": "all components are settled here",
   "author": "huangyan321 <1604549268@qq.com>",
-  "unpkg": "index.js",
   "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.d.ts",
+  "sideEffects": false,
   "peerDependencies": {
     "vue": "^3.2.0"
-  },
-  "sideEffects": true
+  }
 }

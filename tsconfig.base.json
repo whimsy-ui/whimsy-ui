@@ -27,7 +27,7 @@
     // 是否移除注释
     "removeComments": false,
     // 是否生成类型声明文件
-    "noEmit": true,
+    // "noEmit": true,
     // 指定根文件夹
     "rootDir": ".",
     // 指定要包含的类型包名，而不用在文件中引用
