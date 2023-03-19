@@ -46,6 +46,7 @@
     "@commitlint/cz-commitlint": "^17.4.4",
     "@iconify-json/ic": "^1.1.13",
     "@pnpm/types": "^8.10.0",
+    "@types/fs-extra": "^11.0.1",
     "@types/gulp": "^4.0.10",
     "@types/gulp-clean-css": "^4.3.0",
     "@types/gulp-sass": "^5.0.0",

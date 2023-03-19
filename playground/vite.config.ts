@@ -5,7 +5,7 @@ import Components from 'unplugin-vue-components/vite';
 import { WhimsyResolver } from '../dist/whimsy-ui/es/resolver.mjs';
 import path from 'path';
 import buildUtils from '@whimsy-ui/build-utils';
-const { wsRoot } = buildUtils;
+const { wsRoot, pkgRoot } = buildUtils;
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,7 +13,7 @@ export default defineConfig({
     vue(),
     Components({
       include: `${__dirname}/**/*.vue`,
-      resolvers: WhimsyResolver({}),
+      resolvers: WhimsyResolver({ importStyle: 'sass' }),
       dts: true
     })
   ],
@@ -29,7 +29,7 @@ export default defineConfig({
       },
       {
         find: /^whimsy-ui\/(es|lib)\/(.*)$/,
-        replacement: `${wsRoot}/$2`
+        replacement: `${pkgRoot}/$2`
       }
     ]
   }

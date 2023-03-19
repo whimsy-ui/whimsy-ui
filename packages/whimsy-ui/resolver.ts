@@ -1,4 +1,4 @@
-import { ComponentResolver, ComponentInfo } from 'unplugin-vue-components';
+import { ComponentResolver, ComponentInfo, SideEffectsInfo } from 'unplugin-vue-components';
 
 export interface WhimsyResolverOptions {
   /**
@@ -37,7 +37,29 @@ export interface WhimsyResolverOptions {
    */
   noStylesComponents?: string[];
 }
+export function kebabCase(key: string) {
+  const result = key.replace(/([A-Z])/g, ' $1').trim();
+  return result.split(' ').join('-').toLowerCase();
+}
+function getSideEffects(dirName: string, options: WhimsyResolverOptionsResolved): SideEffectsInfo | undefined {
+  const { importStyle, ssr } = options;
+  const themeFolder = 'whimsy-ui/themes';
+  const esComponentsFolder = 'whimsy-ui/es/components';
 
+  if (importStyle === 'sass') {
+    return ssr
+      ? [
+          // `${themeFolder}/src/base.scss`,
+          `${themeFolder}/src/${dirName}.scss`
+        ]
+      : [
+          // `${esComponentsFolder}/base/style/index`,
+          `${esComponentsFolder}/${dirName}/style/index`
+        ];
+  } else if (importStyle === true || importStyle === 'css') {
+    return ssr ? [`${themeFolder}/base.css`, `${themeFolder}/el-${dirName}.css`] : [`${esComponentsFolder}/base/style/css`, `${esComponentsFolder}/${dirName}/style/css`];
+  }
+}
 // Required 让所有属性变成必传的
 type WhimsyResolverOptionsResolved = Required<Omit<WhimsyResolverOptions, 'exclude'>> & Pick<WhimsyResolverOptions, 'exclude'>;
 // unplugin-vue-components resolver
@@ -65,7 +87,7 @@ export function WhimsyResolver(options: WhimsyResolverOptions): ComponentResolve
         if (option.noStylesComponents.includes(name)) {
           return resolveComponent(name, { ...option, importStyle: false });
         }
-        return resolveComponent(name, { ...option, importStyle: false });
+        return resolveComponent(name, { ...option });
       }
     }
   ];
@@ -74,9 +96,11 @@ function resolveComponent(name: string, options: WhimsyResolverOptionsResolved):
   if (options.exclude && name.match(options.exclude)) return;
 
   if (!name.match(/^Ws[A-Z]/)) return;
+  const partialName = kebabCase(name.slice(2)); // ElTableColumn -> table-column
 
   return {
     name,
-    from: 'whimsy-ui/es'
+    from: 'whimsy-ui/es',
+    sideEffects: getSideEffects(partialName, options)
   };
 }

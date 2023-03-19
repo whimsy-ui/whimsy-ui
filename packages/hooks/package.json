@@ -6,7 +6,8 @@
   "author": "huangyan321 <1604549268@qq.com>",
   "types": "index.d.ts",
   "peerDependencies": {
-    "vue": "^3.2.0"
+    "vue": "^3.2.0",
+    "element-plus": "^2.3.0"
   },
   "license": "ISC"
 }
