@@ -12,3 +12,28 @@
 
 <br>
 <br>
+
+# A UI component library ( using monorepo to manage project ecology)
+
+## install
+
+```shell
+pnpm install
+```
+
+## play
+
+```shell
+pnpm run dev
+```
+
+## build
+
+```shell
+
+pnpm run build
+```
+
+## Acknowledgement
+
+- [element-plus](https://github.com/element-plus/element-plus)
