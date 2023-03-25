@@ -1,12 +1,14 @@
-<script setup lang="ts" name="WsButton">
+<script setup lang="ts">
 import { buttonProps, buttonEmits } from './button';
 import { useNamespace } from '@whimsy-ui/hooks';
 import useButton from './use-button';
-const COMPONENT_NAME = 'button';
-
+const COMPONENT_NAME = 'WsButton';
+defineOptions({
+  name: COMPONENT_NAME
+});
 const props = defineProps(buttonProps);
 const emits = defineEmits(buttonEmits);
-const ns = useNamespace(COMPONENT_NAME);
+const ns = useNamespace('button');
 const { _size, _ref, handleClick } = useButton(props, emits);
 
 defineExpose({

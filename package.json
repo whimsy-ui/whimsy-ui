@@ -32,7 +32,8 @@
     "typecheck": "run-p typecheck:web typecheck:play typecheck:node",
     "typecheck:web": "vue-tsc -p tsconfig.web.json --composite false --noEmit",
     "typecheck:node": "tsc -p tsconfig.node.json --noEmit",
-    "typecheck:play": "vue-tsc -p tsconfig.play.json --composite false --noEmit"
+    "typecheck:play": "vue-tsc -p tsconfig.play.json --composite false --noEmit",
+    "publish2npm": "sh ./scripts/publish.sh"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
@@ -97,9 +98,9 @@
     "@whimsy-ui/playground": "workspace:*",
     "@whimsy-ui/utils": "workspace:*",
     "@whimsy-ui/presets": "workspace:*",
+    "whimsy-ui": "workspace:*",
     "element-plus": "^2.3.0",
-    "unocss": "^0.50.4",
-    "whimsy-ui": "workspace:*"
+    "unocss": "^0.50.4"
   },
   "lint-staged": {
     "*.{js,ts,vue,jsx,tsx}": [

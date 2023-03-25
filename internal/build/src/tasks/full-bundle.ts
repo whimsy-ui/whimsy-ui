@@ -19,21 +19,19 @@ async function buildFullEntry(minify: boolean) {
       setupSFC: false,
       plugins: {
         vue: vue({
-          isProduction: true
+          isProduction: false
         }),
         vueJsx: vueJsx()
       }
     }),
     nodeResolve({
-      preferBuiltins: true,
-      mainFields: ['browser'],
       extensions: ['.mjs', '.js', '.json', '.ts']
     }),
     commonjs(),
     esbuild({
       exclude: [],
       sourceMap: minify,
-      target: 'es2020',
+      target,
       loaders: {
         '.vue': 'ts'
       },
@@ -47,7 +45,7 @@ async function buildFullEntry(minify: boolean) {
   if (minify) {
     plugins.push(
       minifyPlugin({
-        target: 'es2020',
+        target,
         sourceMap: true
       })
     );
@@ -56,8 +54,8 @@ async function buildFullEntry(minify: boolean) {
   const bundle = await rollup({
     input: path.resolve(wsRoot, 'index.ts'),
     plugins,
-    treeshake: true,
-    external: await generateExternal({ full: true })
+    external: await generateExternal({ full: true }),
+    treeshake: true
   });
   await writeBundles(bundle, [
     {
