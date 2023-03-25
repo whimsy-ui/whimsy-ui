@@ -11,6 +11,7 @@ export function formatBundleFilename(name: string, minify: boolean, ext: string)
 
 export const generateExternal = async (options: { full: boolean }) => {
   const { dependencies, peerDependencies } = getPackageDependencies(wsPkg);
+  console.log(peerDependencies);
 
   return (id: string) => {
     const packages: string[] = peerDependencies;

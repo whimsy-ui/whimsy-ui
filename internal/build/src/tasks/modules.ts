@@ -9,7 +9,6 @@ import glob from 'fast-glob';
 import { pkgRoot, excludeFiles, wsRoot } from '@whimsy-ui/build-utils';
 import { writeBundles, generateExternal } from '../utils';
 import { buildConfig, buildConfigEntries, target } from '../build-config';
-import { WhimsyAlias } from '../plugins/whimsy-alias';
 
 import type { OutputOptions } from 'rollup';
 
@@ -24,7 +23,6 @@ export const buildModules = async () => {
   const bundle = await rollup({
     input,
     plugins: [
-      WhimsyAlias(),
       VueMacros({
         setupComponent: false,
         setupSFC: false,
@@ -43,7 +41,7 @@ export const buildModules = async () => {
       commonjs(),
       esbuild({
         sourceMap: true,
-        target: 'es2020',
+        target: 'es2018',
         loaders: {
           '.vue': 'ts'
         }

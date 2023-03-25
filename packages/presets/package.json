@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "@unocss/preset-mini": "^0.49.4"
+    "@unocss/preset-mini": "^0.50.4"
   }
 }

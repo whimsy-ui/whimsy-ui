@@ -95,8 +95,8 @@
     "@whimsy-ui/docs": "workspace:*",
     "@whimsy-ui/hooks": "workspace:*",
     "@whimsy-ui/playground": "workspace:*",
-    "@whimsy-ui/themes": "workspace:*",
     "@whimsy-ui/utils": "workspace:*",
+    "@whimsy-ui/presets": "workspace:*",
     "element-plus": "^2.3.0",
     "unocss": "^0.50.4",
     "whimsy-ui": "workspace:*"

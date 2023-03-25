@@ -37,10 +37,6 @@ export default series(
     })
   ),
   parallel(runTask('buildModules'), runTask('buildFullBundle'), runTask('generateTypesDefinitions')),
-  series(
-    withTaskName('buildThemes', () => run('pnpm run -C packages/themes build')),
-    copyFullStyle
-  ),
   parallel(copyTypesDefinitions, copyFiles)
 );
 

@@ -7,7 +7,6 @@ export const pathRewriter = (module: Module) => {
   const config = buildConfig[module];
 
   return (id: string) => {
-    id = id.replaceAll(`@whimsy-ui/themes`, `whimsy-ui/themes`);
     id = id.replaceAll(`@whimsy-ui/`, `${config.bundle.path}/`);
     return id;
   };

@@ -8,14 +8,12 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import esbuild, { minify as minifyPlugin } from 'rollup-plugin-esbuild';
 import { parallel } from 'gulp';
 import { wsOutput, wsRoot } from '@whimsy-ui/build-utils';
-import { WhimsyAlias } from '../plugins/whimsy-alias';
 import { formatBundleFilename, withTaskName, writeBundles, generateExternal } from '../utils';
 import { target } from '../build-config';
 import type { Plugin } from 'rollup';
 
 async function buildFullEntry(minify: boolean) {
   const plugins: Plugin[] = [
-    WhimsyAlias(),
     VueMacros({
       setupComponent: false,
       setupSFC: false,
