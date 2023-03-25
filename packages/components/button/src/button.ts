@@ -1,38 +1,19 @@
-import type { ExtractPropTypes } from 'vue';
-
-export const size = {
-  small: {
-    x: '2',
-    y: '1',
-    text: 'sm'
-  },
-  medium: {
-    x: '3',
-    y: '2',
-    text: 'base'
-  },
-  large: {
-    x: '4',
-    y: '3',
-    text: 'lg'
-  }
+import type { ExtractPropTypes, PropType } from 'vue';
+import { VariantProp, TypeProp, BooleanProp } from '../../composables';
+import { ButtonSize } from './type';
+export const ButtonSizeProp = {
+  type: String as PropType<ButtonSize>,
+  validator: (value: string) => ['mini', 'small', 'normal', 'large'].includes(value),
+  default: 'normal'
 };
-const sizeValues = ['small', 'medium', 'large'];
-const colorValues = ['gray', 'red', 'yellow', 'green', 'blue', 'indigo', 'purple', 'pink'];
 export const buttonProps = {
-  size: {
-    type: String,
-    values: sizeValues,
-    default: 'medium'
-  },
-  color: {
-    type: String,
-    values: colorValues,
-    default: 'gray'
-  },
-  round: Boolean,
-  plain: Boolean,
-  icon: String
+  size: ButtonSizeProp,
+  variant: VariantProp,
+  type: TypeProp,
+  icon: String,
+  square: BooleanProp,
+  round: BooleanProp,
+  loading: BooleanProp
 };
 export const buttonEmits = {
   click: (evt: MouseEvent) => evt instanceof MouseEvent

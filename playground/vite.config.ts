@@ -5,17 +5,23 @@ import Components from 'unplugin-vue-components/vite';
 import { WhimsyResolver } from '../dist/whimsy-ui/es/resolver.mjs';
 import path from 'path';
 import buildUtils from '@whimsy-ui/build-utils';
+import UnoCSS from 'unocss/vite';
+import './unocss.config.ts';
 const { wsRoot, pkgRoot } = buildUtils;
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    port: 2023
+  },
   plugins: [
     vue(),
     Components({
       include: `${__dirname}/**/*.vue`,
-      resolvers: WhimsyResolver({ importStyle: 'sass' }),
+      resolvers: WhimsyResolver({ importStyle: false }),
       dts: true
-    })
+    }),
+    UnoCSS({})
   ],
   optimizeDeps: {
     include: ['vue', '@vue/shared']

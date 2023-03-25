@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import 'uno.css';
 // @ts-ignore
 // import 'whimsy-ui/dist/index.css';
 (async () => {

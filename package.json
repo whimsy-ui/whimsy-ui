@@ -98,6 +98,7 @@
     "@whimsy-ui/themes": "workspace:*",
     "@whimsy-ui/utils": "workspace:*",
     "element-plus": "^2.3.0",
+    "unocss": "^0.50.4",
     "whimsy-ui": "workspace:*"
   },
   "lint-staged": {

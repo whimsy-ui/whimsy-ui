@@ -1,7 +1,9 @@
 <template>
   <div class="play-container">
-    <div>123</div>
-    <ws-button color="gray">ws-button</ws-button>
+    <ws-button round>ws-button</ws-button>
+    <ws-button square>ws-button</ws-button>
+    <ws-button icon="i-carbon:checkmark" class="text-1">Icon</ws-button>
+    <ws-button loading>Icon</ws-button>
   </div>
 </template>
 

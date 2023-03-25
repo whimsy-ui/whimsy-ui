@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.45"
+    "@iconify-json/carbon": "^1.1.16",
+    "vue": "^3.2.45",
+    "whimsy-ui": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",

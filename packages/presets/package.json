@@ -1,0 +1,14 @@
+{
+  "name": "@whimsy-ui/presets",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.ts",
+  "sideEffects": false,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "@unocss/preset-mini": "^0.49.4"
+  }
+}

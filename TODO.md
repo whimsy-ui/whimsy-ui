@@ -4,3 +4,7 @@
 - 改造 whimsy-ui 为 unbuild 打包
 - 完善生产模式机制
   去他妈的 jjit 是 node 运行时 在浏览器跑不了 我操你妈的
+
+- 使用 unocss 进行样式定制
+  样式不应成为阻碍
+  自己定义 unocss 快照

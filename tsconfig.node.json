@@ -5,7 +5,7 @@
     "composite": true,
     // 指定生成什么模块代码
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     // 指定库声明文件
     "lib": ["ESNext"],
@@ -14,5 +14,5 @@
     // 跳过所有.d的类型检查。ts文件。
     "skipLibCheck": true
   },
-  "include": ["scripts/**/*", "internal/**/*"]
+  "include": ["scripts/**/*", "internal/**/*", "packages/presets/**/*"]
 }

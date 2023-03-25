@@ -2,7 +2,7 @@
 
 <template>
   <div>Hello World</div>
-  <ws-button color="gray">ws-button</ws-button>
+  <ws-button round variant="light">ws-button</ws-button>
 </template>
 
 <style scoped>
