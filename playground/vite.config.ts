@@ -7,6 +7,7 @@ import path from 'path';
 import buildUtils from '@whimsy-ui/build-utils';
 import UnoCSS from 'unocss/vite';
 import './unocss.config.ts';
+import VueMacros from 'unplugin-vue-macros/vite';
 const { wsRoot, pkgRoot } = buildUtils;
 
 // https://vitejs.dev/config/
@@ -21,7 +22,8 @@ export default defineConfig({
       resolvers: WhimsyResolver({ importStyle: false }),
       dts: true
     }),
-    UnoCSS({})
+    UnoCSS({}),
+    VueMacros()
   ],
   optimizeDeps: {
     include: ['vue', '@vue/shared']
