@@ -1,5 +1,5 @@
 export const buttonShortcuts: Record<string, string> = {
-  'ws-button': `bg-red-500 py-2 px-3 outline-none relative box-border inline-block m-0 rounded-lg after:display-none ws-transition
+  'ws-button': `py-2 px-3 outline-none relative box-border inline-block m-0 rounded-lg after:display-none ws-transition
   text-center overflow-visible bg-clip-padding border-none whitespace-nowrap shadow-lg
    before:content-none before:absolute before:w-full before:h-full before:left-50% before:top-50% before:-translate-50%
    before:border-style-inherit before:border-width-inherit before:border-rd-inherit before:border-black before:bg-black before:op0`,

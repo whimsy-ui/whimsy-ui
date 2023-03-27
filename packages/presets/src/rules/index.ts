@@ -2,6 +2,7 @@ import type { Rule, RuleContext } from 'unocss';
 import type { Theme } from '@unocss/preset-mini';
 import { parseColor } from '@unocss/preset-mini';
 export default [
+  // 定义css变量
   [
     /^ws-(.*)$/,
     ([, body]: string[], { theme }: RuleContext<Theme>) => {

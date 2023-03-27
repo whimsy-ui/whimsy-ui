@@ -1,5 +1,5 @@
 import type { Theme } from 'unocss/preset-mini';
-
+// 使用时
 export default {
   colors: {
     context: 'rgb(var(--ws-c-context))',
@@ -8,15 +8,16 @@ export default {
     info: '#0080FF',
     warning: '#F17F42',
     danger: '#F15C5C',
-
-    gray1: '#f7f8fa',
-    gray2: '#f2f3f5',
-    gray3: '#ebedf0',
-    gray4: '#dcdee0',
-    gray5: '#c8c9cc',
-    gray6: '#969799',
-    gray7: '#646566',
-    gray8: '#323233',
+    'black-1': '#000',
+    'white-1': ' #fff',
+    'gray-1': '#f7f8fa',
+    'gray-2': '#f2f3f5',
+    'gray-3': '#ebedf0',
+    'gray-4': '#dcdee0',
+    'gray-5': '#c8c9cc',
+    'gray-6': '#969799',
+    'gray-7': '#646566',
+    'gray-8': '#323233',
 
     lightBg: '#F3F4F6',
     darkBg: '#373739',
