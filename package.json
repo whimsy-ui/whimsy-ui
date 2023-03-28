@@ -86,6 +86,7 @@
     "vite-plugin-dts": "^1.7.3",
     "vitest": "^0.28.5",
     "vue": "^3.2.37",
+    "vue-router": "^4.1.6",
     "vue-tsc": "^1.0.24",
     "web-norm": "^1.0.27"
   },
@@ -96,11 +97,11 @@
     "@whimsy-ui/docs": "workspace:*",
     "@whimsy-ui/hooks": "workspace:*",
     "@whimsy-ui/playground": "workspace:*",
-    "@whimsy-ui/utils": "workspace:*",
     "@whimsy-ui/presets": "workspace:*",
-    "whimsy-ui": "workspace:*",
+    "@whimsy-ui/utils": "workspace:*",
     "element-plus": "^2.3.0",
-    "unocss": "^0.50.4"
+    "unocss": "^0.50.4",
+    "whimsy-ui": "workspace:*"
   },
   "lint-staged": {
     "*.{js,ts,vue,jsx,tsx}": [

@@ -1,6 +1,19 @@
 <template>
   <div class="play-container">
-    <ws-cell round>ws-button</ws-cell>
+    <ws-cell class="mt-10">
+      <template #title>
+        <div>title slot</div>
+      </template>
+    </ws-cell>
+    <ws-cell title="title props" class="mt-10" />
+    <ws-cell>
+      <template #content>
+        <div>content slot</div>
+      </template>
+    </ws-cell>
+    <ws-cell content="content props" />
+    <ws-cell title="title" content="content props" />
+    <ws-cell title="title" content="clickable cell" clickable />
   </div>
 </template>
 
@@ -9,6 +22,9 @@
 </script>
 
 <style lang="scss">
+:root {
+  background-color: #f7f8fa;
+}
 html,
 body {
   width: 100vw;
@@ -17,13 +33,6 @@ body {
   #play {
     height: 100%;
     width: 100%;
-    .play-container {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
   }
 }
 </style>

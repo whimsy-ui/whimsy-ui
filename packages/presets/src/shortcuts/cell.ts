@@ -1,3 +1,6 @@
 export const cellShortcuts: Record<string, string> = {
-  'ws-cell': `relative flex border-box w-full p-1 overflow-hidden ws-gray-7 text-lg ws-bg-2 `
+  'ws-cell': `relative flex box-border w-full px-2 py-3 ws-text-color overflow-hidden ws-gray-3 text-md ws-bg-2 after:hairline-bottom after:left-2 after:right-2 last:after:display-none`,
+  'ws-cell__title': `flex-1`,
+  'ws-cell__content': `flex-1 text-end relative overflow-hidden ws-text-color-2`,
+  'ws-cell--clickable': `cursor:pointer active:ws-active-bg-color`
 };
