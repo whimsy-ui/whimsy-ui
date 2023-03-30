@@ -2033,7 +2033,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.2.0_bbhgkqmop4v24vevyan3j2nitq
+      vite: 4.2.0
       vue: 3.2.47
 
   /@vitest/coverage-c8/0.28.5_myu5idz5vomytrwvsvx43lkvra:

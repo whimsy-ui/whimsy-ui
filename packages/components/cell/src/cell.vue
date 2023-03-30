@@ -16,12 +16,15 @@
 </template>
 
 <script setup lang="ts">
-import { useNamespace } from '@whimsy-ui/hooks';
+import { useNamespace } from '@whimsy-ui/utils';
 import { cellProps, cellEmits } from './cell';
 import { isDef } from '@whimsy-ui/utils';
 import { computed } from 'vue';
 // import type { Router } from 'vue-router';
 const ns = useNamespace('cell');
+defineOptions({
+  name: 'WsCell'
+});
 // const _this = getCurrentInstance();
 const props = defineProps(cellProps);
 const emit = defineEmits(cellEmits);

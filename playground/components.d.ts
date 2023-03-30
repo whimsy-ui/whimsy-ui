@@ -13,5 +13,6 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView'];
     WsButton: typeof import('whimsy-ui/es')['WsButton'];
     WsCell: typeof import('whimsy-ui/es')['WsCell'];
+    WsCellGroup: typeof import('whimsy-ui/es')['WsCellGroup'];
   }
 }

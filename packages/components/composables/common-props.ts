@@ -14,7 +14,7 @@ export const BooleanProp = {
   default: false
 };
 
-export const BooleanTrueProp = {
+export const truthProp = {
   type: Boolean,
   default: true
 };
