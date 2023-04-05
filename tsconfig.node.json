@@ -14,5 +14,5 @@
     // 跳过所有.d的类型检查。ts文件。
     "skipLibCheck": true
   },
-  "include": ["scripts/**/*", "internal/**/*", "packages/presets/**/*"]
+  "include": ["scripts/**/*", "internal/**/*"]
 }

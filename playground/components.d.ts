@@ -14,5 +14,6 @@ declare module '@vue/runtime-core' {
     WsButton: typeof import('whimsy-ui/es')['WsButton'];
     WsCell: typeof import('whimsy-ui/es')['WsCell'];
     WsCellGroup: typeof import('whimsy-ui/es')['WsCellGroup'];
+    WsCheckbox: typeof import('whimsy-ui/es')['WsCheckbox'];
   }
 }

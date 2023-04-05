@@ -1,5 +1,5 @@
 <template>
-  <tag :class="[ns.b(), isClick ? ns.m('clickable') : '']" @click="handleClick">
+  <div :class="[ns.b(), isClick ? ns.m('clickable') : '']" @click="handleClick">
     <div :class="[ns.e('title')]">
       <slot v-if="$slots.title" name="title"></slot>
       <span v-else-if="isDef(title)">
@@ -12,7 +12,7 @@
         {{ content }}
       </span>
     </div>
-  </tag>
+  </div>
 </template>
 
 <script setup lang="ts">

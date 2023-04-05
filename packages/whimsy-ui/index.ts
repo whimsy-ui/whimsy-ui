@@ -1,7 +1,7 @@
 /** @format */
 import { type App } from 'vue';
-import { WsButton, WsWaterfall, WsCell, WsCellGroup } from '@whimsy-ui/components';
-export { WsButton, WsWaterfall, WsCell, WsCellGroup };
+import { WsButton, WsWaterfall, WsCell, WsCellGroup, WsCheckbox } from '@whimsy-ui/components';
+export { WsButton, WsWaterfall, WsCell, WsCellGroup, WsCheckbox };
 // import { ElAffix } from 'element-plus';
 // export { ElAffix };
 export * from './resolver';
@@ -13,5 +13,6 @@ export default {
     app.component(WsWaterfall.name, WsWaterfall);
     app.component(WsCell.name, WsCell);
     app.component(WsCellGroup.name, WsCellGroup);
+    app.component(WsCheckbox.name, WsCheckbox);
   }
 };

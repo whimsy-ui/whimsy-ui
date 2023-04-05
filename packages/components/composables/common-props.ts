@@ -54,3 +54,4 @@ export const PositionProp = {
   validator: (value: string) => ['top', 'bottom', 'left', 'right', 'center'].includes(value),
   default: 'center'
 };
+export const unknownProp = null as unknown as PropType<unknown>;
