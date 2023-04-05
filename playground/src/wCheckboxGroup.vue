@@ -1,14 +1,16 @@
 <template>
   <div class="play-container">
-    <ws-checkbox v-model="value1">checkbox</ws-checkbox>
-    <ws-checkbox v-model="value2"></ws-checkbox>
+    <ws-checkbox-group v-model="value1" :max="2">
+      <ws-checkbox name="一号选手">checkbox1</ws-checkbox>
+      <ws-checkbox name="二号选手">checkbox2</ws-checkbox>
+      <ws-checkbox name="三号选手">checkbox3</ws-checkbox>
+    </ws-checkbox-group>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-const value1 = ref(false);
-const value2 = ref(false);
+const value1 = ref([]);
 // code here
 </script>
 

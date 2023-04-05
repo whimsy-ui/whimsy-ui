@@ -5,4 +5,5 @@ import { baseShortcuts } from './base';
 import { cellShortcuts } from './cell';
 import { cellGroupShortcuts } from './cell-group';
 import { checkboxShortcuts } from './checkbox';
-export default [baseShortcuts, buttonShortcuts, cellShortcuts, cellGroupShortcuts, checkboxShortcuts] as UserShortcuts<Theme>;
+import { checkboxGroupShortcuts } from './checkbox-group';
+export default [baseShortcuts, buttonShortcuts, cellShortcuts, cellGroupShortcuts, checkboxShortcuts, checkboxGroupShortcuts] as UserShortcuts<Theme>;

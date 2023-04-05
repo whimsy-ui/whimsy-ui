@@ -6,7 +6,10 @@ export const checkboxProps = {
   modelValue: unknownProp,
   disabled: Boolean,
   labelDisabled: Boolean,
-  shape: makeStringProp<'round' | 'square'>('round')
+  shape: makeStringProp<'round' | 'square'>('round'),
+  name: {
+    type: [Symbol, String]
+  }
 };
 export const checkboxEmits = {
   [CHANGE_EVENT]: (evt: MouseEvent) => evt instanceof MouseEvent,
