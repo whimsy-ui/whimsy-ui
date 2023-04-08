@@ -1,5 +1,5 @@
 <template>
-  <Checker v-bind="props" :ns="ns" :checked="checked" :disabled="isDisabled" :parent-props="checkboxGroup" @toggle="onToggle">
+  <Checker v-bind="props" :ns="ns" :checked="checked" :disabled="isDisabled" @toggle="onToggle">
     <template v-if="$slots.icon" #icon> <slot name="icon"></slot> </template>
     <template v-if="$slots.default" #default> <slot name="default"></slot> </template>
   </Checker>

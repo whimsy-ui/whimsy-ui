@@ -6,4 +6,15 @@ import { cellShortcuts } from './cell';
 import { cellGroupShortcuts } from './cell-group';
 import { checkboxShortcuts } from './checkbox';
 import { checkboxGroupShortcuts } from './checkbox-group';
-export default [baseShortcuts, buttonShortcuts, cellShortcuts, cellGroupShortcuts, checkboxShortcuts, checkboxGroupShortcuts] as UserShortcuts<Theme>;
+import { radioShortcuts } from './radio';
+import { radioGroupShortcuts } from './radio-group';
+export default [
+  baseShortcuts,
+  buttonShortcuts,
+  cellShortcuts,
+  cellGroupShortcuts,
+  checkboxShortcuts,
+  checkboxGroupShortcuts,
+  radioShortcuts,
+  radioGroupShortcuts
+] as UserShortcuts<Theme>;

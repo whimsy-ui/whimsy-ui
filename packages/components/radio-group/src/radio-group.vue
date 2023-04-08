@@ -6,19 +6,19 @@
 
 <script setup lang="ts">
 import { provide, toRefs } from 'vue';
-import { checkboxGroupProps, checkboxGroupEmits } from './checkbox-group';
+import { radioGroupProps, radioGroupEmits } from './radio-group';
 import { useNamespace } from '@whimsy-ui/utils';
-import { checkboxGroupContextKey } from '@whimsy-ui/components';
+import { radioGroupContextKey } from '@whimsy-ui/components';
 defineOptions({
-  name: 'WsCheckboxGroup'
+  name: 'WsRadioGroup'
 });
-const props = defineProps(checkboxGroupProps);
-const emit = defineEmits(checkboxGroupEmits);
+const props = defineProps(radioGroupProps);
+const emit = defineEmits(radioGroupEmits);
 const ns = useNamespace('checkbox-group');
-const changeEvent = (newValue: any[]) => {
+const changeEvent = (newValue: any) => {
   emit('update:modelValue', newValue);
 };
-provide(checkboxGroupContextKey, {
+provide(radioGroupContextKey, {
   ...toRefs(props),
   changeEvent
 });

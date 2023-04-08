@@ -1,0 +1,29 @@
+{
+  "name": "@whimsy-ui/cli",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "bin": {
+    "whimsy-cli": "./dist/cli.ts.cjs"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "unbuild",
+    "dev": "pnpm run stub",
+    "stub": "unbuild --stub"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.5"
+  },
+  "devDependencies": {
+    "unbuild": "^1.1.2"
+  }
+}

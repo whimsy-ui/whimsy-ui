@@ -33,7 +33,8 @@
     "typecheck:web": "vue-tsc -p tsconfig.web.json --composite false --noEmit",
     "typecheck:node": "tsc -p tsconfig.node.json --noEmit",
     "typecheck:play": "vue-tsc -p tsconfig.play.json --composite false --noEmit",
-    "publish2npm": "sh ./scripts/publish.sh"
+    "publish2npm": "sh ./scripts/publish.sh",
+    "whimsy-cli": "whimsy-cli"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
@@ -77,6 +78,7 @@
     "prettier": "^2.8.4",
     "rimraf": "^4.4.0",
     "sass": "^1.59.2",
+    "ts-node": "^10.9.1",
     "tsx": "^3.12.4",
     "typescript": "^4.5.2",
     "unplugin-vue-components": "^0.24.1",
@@ -92,6 +94,7 @@
   },
   "dependencies": {
     "@whimsy-ui/build-utils": "workspace:*",
+    "@whimsy-ui/cli": "workspace:*",
     "@whimsy-ui/components": "workspace:*",
     "@whimsy-ui/constants": "workspace:*",
     "@whimsy-ui/docs": "workspace:*",
