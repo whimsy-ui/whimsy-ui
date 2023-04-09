@@ -1,5 +1,8 @@
 <template>
-  <Checker :ns="ns" :checked="checked" :shape="shape" @toggle="toggle"></Checker>
+  <Checker :ns="ns" :checked="checked" :shape="shape" @toggle="toggle">
+    <template v-if="$slots.icon" #icon> <slot name="icon"></slot> </template>
+    <template v-if="$slots.default" #default> <slot name="default"></slot> </template>
+  </Checker>
 </template>
 
 <script setup lang="ts">

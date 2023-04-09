@@ -1,12 +1,12 @@
 <template>
   <div :class="[ns.b(), isClick ? ns.m('clickable') : '']" @click="handleClick">
-    <div :class="[ns.e('title')]">
+    <div :class="[ns.e('title'), titleClass]" :style="titleStyle">
       <slot v-if="$slots.title" name="title"></slot>
       <span v-else-if="isDef(title)">
         {{ title }}
       </span>
     </div>
-    <div :class="[ns.e('content')]">
+    <div :class="[ns.e('content'), contentClass]">
       <slot v-if="$slots.content" name="content"></slot>
       <span v-else-if="isDef(content)">
         {{ content }}

@@ -1,5 +1,5 @@
 import { ExtractPropTypes } from 'vue';
-import { unknownProp, makeStringProp } from '@whimsy-ui/utils';
+import { unknownProp, makeStringProp, isString, isNumber } from '@whimsy-ui/utils';
 import { UPDATE_MODEL_EVENT } from '@whimsy-ui/constants';
 export const radioProps = {
   modelValue: unknownProp,
@@ -12,6 +12,6 @@ export const radioProps = {
   }
 };
 export const radioEmits = {
-  [UPDATE_MODEL_EVENT]: (newValue: any) => true
+  [UPDATE_MODEL_EVENT]: (newValue: any) => isString(newValue) || isNumber(newValue)
 };
 export type RadioProps = ExtractPropTypes<typeof radioProps>;

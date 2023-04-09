@@ -5,6 +5,8 @@ export const baseShortcuts: Record<string, string> = {
   'ws-bg-2': 'bg-white dark:bg-[#1c1c1e]',
   // 通用背景3
   'ws-bg-3': 'bg-white dark:bg-[#37363b]',
+
+  'ws-bg-primary': 'bg-context ws-primary dark:bg-[#37363b]',
   // 通用文字颜色1
   'ws-text-color': 'text-[#323233] ws-gray-8 dark:text-[#f5f5f5]',
   // 通用文字颜色2

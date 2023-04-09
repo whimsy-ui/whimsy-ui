@@ -9,6 +9,6 @@ export const radioGroupProps = {
   checkedColor: String
 };
 export const radioGroupEmits = {
-  [UPDATE_MODEL_EVENT]: (newValue: any[]) => isArray(newValue)
+  [UPDATE_MODEL_EVENT]: (newValue: any) => true
 };
 export type RadioGroupProps = ExtractPropTypes<typeof radioGroupProps>;
