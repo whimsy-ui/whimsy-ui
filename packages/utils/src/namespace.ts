@@ -20,7 +20,7 @@ const _bem = (namespace: string, block: string, blockSuffix: string, element: st
 // 命名空间hook 规范命名 防止全局命名冲突
 export const useNamespace = (block: string) => {
   const namespace = defaultNamespace;
-  // 创建块 例如：ws-form
+  // 创建块 例如：ws-form(无参数) ws-form-item(有参数)
   const b = (blockSuffix: string = '') => _bem(namespace, block, blockSuffix, '', '');
   // 创建元素 例如：ws-form__inner
   const e = (element?: string) => (element ? _bem(namespace, block, '', element, '') : '');

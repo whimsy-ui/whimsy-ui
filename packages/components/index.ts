@@ -9,5 +9,6 @@ export * from './radio';
 export * from './radio-group';
 export * from './switch';
 export * from './input';
+export * from './notice-bar';
 
 export * from './utils';

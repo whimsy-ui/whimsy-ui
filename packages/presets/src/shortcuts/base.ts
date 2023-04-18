@@ -17,7 +17,7 @@ export const baseShortcuts: Record<string, string> = {
   // 通用过度
   'ws-transition': 'transition-all duration-200',
   // 通用线边框
-  'ws-solid': 'bg-context border border-solid border-context text-white dark:bg-op80 dark:border-op80 dark:text-op80',
+  'ws-solid': 'bg-context border border-solid border-context text-white dark:bg-op80 dark:border-op80 dark:text-op80 ws-bg-primary',
   // 通用轮廓边框
   'ws-outline': 'bg-transparent border border-solid border-context text-context dark:border-op80 dark:text-op80',
   // 通用幽灵边框

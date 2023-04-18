@@ -17,6 +17,7 @@ declare module '@vue/runtime-core' {
     WsCheckbox: typeof import('whimsy-ui/es')['WsCheckbox'];
     WsCheckboxGroup: typeof import('whimsy-ui/es')['WsCheckboxGroup'];
     WsInput: typeof import('whimsy-ui/es')['WsInput'];
+    WsNoticeBar: typeof import('whimsy-ui/es')['WsNoticeBar'];
     WsRadio: typeof import('whimsy-ui/es')['WsRadio'];
     WsRadioGroup: typeof import('whimsy-ui/es')['WsRadioGroup'];
     WsSwitch: typeof import('whimsy-ui/es')['WsSwitch'];

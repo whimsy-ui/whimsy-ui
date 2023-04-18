@@ -4,3 +4,4 @@ export * from './src/basic';
 export * from './src/props';
 export * from './src/validate';
 export * from './src/namespace';
+export * from './src/animation';

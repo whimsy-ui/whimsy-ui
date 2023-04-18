@@ -1,7 +1,7 @@
 /** @format */
 import { type App } from 'vue';
-import { WsButton, WsWaterfall, WsCell, WsCellGroup, WsCheckbox, WsCheckboxGroup, WsRadio, WsRadioGroup, WsSwitch, WsInput } from '@whimsy-ui/components';
-export { WsButton, WsWaterfall, WsCell, WsCellGroup, WsCheckbox, WsCheckboxGroup, WsRadio, WsRadioGroup, WsSwitch, WsInput };
+import { WsButton, WsWaterfall, WsCell, WsCellGroup, WsCheckbox, WsCheckboxGroup, WsRadio, WsRadioGroup, WsSwitch, WsInput, WsNoticeBar } from '@whimsy-ui/components';
+export { WsButton, WsWaterfall, WsCell, WsCellGroup, WsCheckbox, WsCheckboxGroup, WsRadio, WsRadioGroup, WsSwitch, WsInput, WsNoticeBar };
 // import { ElAffix } from 'element-plus';
 // export { ElAffix };
 export * from './resolver';
