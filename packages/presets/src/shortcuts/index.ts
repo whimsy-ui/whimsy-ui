@@ -11,6 +11,7 @@ import { radioGroupShortcuts } from './radio-group';
 import { switchShortcuts } from './switch';
 import { inputShortcuts } from './input';
 import { noticeBarShortcuts } from './notice-bar';
+import { transitionShortcuts } from './transition';
 export default [
   baseShortcuts,
   buttonShortcuts,
@@ -22,5 +23,6 @@ export default [
   radioGroupShortcuts,
   switchShortcuts,
   inputShortcuts,
-  noticeBarShortcuts
+  noticeBarShortcuts,
+  transitionShortcuts
 ] as UserShortcuts<Theme>;
