@@ -5,3 +5,4 @@ export * from './src/props';
 export * from './src/validate';
 export * from './src/namespace';
 export * from './src/animation';
+export * from './src/format';

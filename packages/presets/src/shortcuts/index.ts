@@ -12,6 +12,7 @@ import { switchShortcuts } from './switch';
 import { inputShortcuts } from './input';
 import { noticeBarShortcuts } from './notice-bar';
 import { transitionShortcuts } from './transition';
+import { overlayShortcuts } from './overlay';
 export default [
   baseShortcuts,
   buttonShortcuts,
@@ -24,5 +25,6 @@ export default [
   switchShortcuts,
   inputShortcuts,
   noticeBarShortcuts,
-  transitionShortcuts
+  transitionShortcuts,
+  overlayShortcuts
 ] as UserShortcuts<Theme>;
