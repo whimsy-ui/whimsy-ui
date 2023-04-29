@@ -1,9 +1,11 @@
 <template>
-  <WsOverlay :show="show" :z-index="customZIndex" :blur="blur" @click="overlayClick">
+  <WsOverlay v-if="overlay" :show="show" :z-index="customZIndex" :blur="blur" @click="overlayClick">
     <slot name="overlay-content"></slot>
   </WsOverlay>
   <Transition :name="transitionName" appear v-bind="$attrs">
-    <div v-show="show" :class="[ns.b(), ns.m(position)]" :style="style"></div>
+    <div v-show="show" :class="[ns.b(), ns.m(position)]" :style="style">
+      <slot></slot>
+    </div>
   </Transition>
 </template>
 

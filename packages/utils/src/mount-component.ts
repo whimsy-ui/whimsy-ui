@@ -7,7 +7,7 @@ export function mountComponent(rootComponent: Component, el = 'body') {
   const root = document.createElement('div');
   dom.appendChild(root);
   return {
-    instance: app.mount(dom),
+    instance: app.mount(root),
     unmount() {
       app.unmount();
       dom.removeChild(root);
