@@ -13,6 +13,8 @@ import { inputShortcuts } from './input';
 import { noticeBarShortcuts } from './notice-bar';
 import { transitionShortcuts } from './transition';
 import { overlayShortcuts } from './overlay';
+import { notifyShortcuts } from './notify';
+import { popupShortcuts } from './popup';
 export default [
   baseShortcuts,
   buttonShortcuts,
@@ -26,5 +28,7 @@ export default [
   inputShortcuts,
   noticeBarShortcuts,
   transitionShortcuts,
-  overlayShortcuts
+  overlayShortcuts,
+  notifyShortcuts,
+  popupShortcuts
 ] as UserShortcuts<Theme>;

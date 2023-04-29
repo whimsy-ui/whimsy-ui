@@ -6,6 +6,34 @@ const fadeShortcuts: Record<string, string> = {
   // [fade.b('enter-from')]: `opacity-0`,
   // [fade.b('leave-to')]: `opacity-0`
 };
+const slideTop = useNamespace('slide-top');
+const slideUpShortcuts: Record<string, string> = {
+  [slideTop.b('enter-active')]: `animate-slide-in-down animate-ease-linear animate-duration-200 animate-both`,
+  [slideTop.b('leave-active')]: `animate-slide-in-down animate-ease-linear animate-duration-200 animate-both animate-reverse`
+  // [fade.b('enter-from')]: `opacity-0`,
+  // [fade.b('leave-to')]: `opacity-0`
+};
+const slideBottom = useNamespace('slide-bottom');
+const slideBottomShortcuts: Record<string, string> = {
+  [slideBottom.b('enter-active')]: `animate-slide-in-up animate-ease-linear animate-duration-200 animate-both`,
+  [slideBottom.b('leave-active')]: `animate-slide-in-up animate-ease-linear animate-duration-200 animate-both animate-reverse`
+  // [fade.b('enter-from')]: `opacity-0`,
+  // [fade.b('leave-to')]: `opacity-0`
+};
+const slideLeft = useNamespace('slide-left');
+const slideLeftShortcuts: Record<string, string> = {
+  [slideLeft.b('enter-active')]: `animate-slide-in-left animate-ease-linear animate-duration-200 animate-both`,
+  [slideLeft.b('leave-active')]: `animate-slide-in-left animate-ease-linear animate-duration-200 animate-both animate-reverse`
+  // [fade.b('enter-from')]: `opacity-0`,
+  // [fade.b('leave-to')]: `opacity-0`
+};
+const slideRight = useNamespace('slide-right');
+const slideRightShortcuts: Record<string, string> = {
+  [slideRight.b('enter-active')]: `animate-slide-in-right animate-ease-linear animate-duration-200 animate-both`,
+  [slideRight.b('leave-active')]: `animate-slide-in-right animate-ease-linear animate-duration-200 animate-both animate-reverse`
+  // [fade.b('enter-from')]: `opacity-0`,
+  // [fade.b('leave-to')]: `opacity-0`
+};
 const rotate = useNamespace('rotate');
 const rotateShortcuts: Record<string, string> = {
   [rotate.b('enter-active')]: `animate-rotate-in animate-ease-linear animate-duration-200`,
@@ -16,5 +44,9 @@ const rotateShortcuts: Record<string, string> = {
 
 export const transitionShortcuts: Record<string, string> = {
   ...fadeShortcuts,
-  ...rotateShortcuts
+  ...rotateShortcuts,
+  ...slideUpShortcuts,
+  ...slideBottomShortcuts,
+  ...slideLeftShortcuts,
+  ...slideRightShortcuts
 };

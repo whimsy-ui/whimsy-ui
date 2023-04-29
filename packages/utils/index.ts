@@ -6,3 +6,4 @@ export * from './src/validate';
 export * from './src/namespace';
 export * from './src/animation';
 export * from './src/format';
+export * from './src/interceptor';

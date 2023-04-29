@@ -11,5 +11,7 @@ export * from './switch';
 export * from './input';
 export * from './notice-bar';
 export * from './overlay';
+export * from './notify';
+export * from './popup';
 
 export * from './utils';
