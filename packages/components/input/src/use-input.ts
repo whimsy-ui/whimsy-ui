@@ -15,11 +15,8 @@ export default (props: InputProps, emit: SetupContext<InputEmits>['emit']) => {
   // 该函数触发时机：input元素value改变后，且在emit更新modelValue之前
   const limitValue = (value: string) => {
     const { maxLength } = props;
-    console.log('maxLength', maxLength);
 
     if (isDef(maxLength) && getStringLength(value) > +maxLength) {
-      console.log('getStringLength(value)', +maxLength);
-
       if (modelValue.value && getStringLength(modelValue.value) === +maxLength) {
         return modelValue.value;
       }
