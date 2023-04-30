@@ -1,11 +1,11 @@
 <template>
   <WsPopup :class="[ns.b(), ns.m(type)]" :style="{ background, color }" :show="show" :overlay="false" :z-index="zIndex" :position="position" @update:show="$emit('update:show')">
-    <slot></slot>
+    <slot v-if="$slots.default"></slot>
+    <span v-else>{{ message }}</span>
   </WsPopup>
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, computed, watch, onMounted, onUnmounted } from 'vue';
 import { WsPopup } from '@whimsy-ui/components';
 import { notifyProps, notifyEmits } from './notify';
 import useNotify from './use-notify';

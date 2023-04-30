@@ -228,6 +228,7 @@ importers:
     specifiers:
       '@iconify-json/carbon': ^1.1.16
       '@vitejs/plugin-vue': ^4.0.0
+      '@vitejs/plugin-vue-jsx': ^3.0.1
       typescript: ^4.9.3
       unplugin-vue-components: ^0.24.0
       vite: ^4.1.0
@@ -240,6 +241,7 @@ importers:
       whimsy-ui: link:../packages/whimsy-ui
     devDependencies:
       '@vitejs/plugin-vue': 4.1.0_vite@4.2.0+vue@3.2.47
+      '@vitejs/plugin-vue-jsx': 3.0.1_vite@4.2.0+vue@3.2.47
       typescript: 4.9.5
       unplugin-vue-components: 0.24.1_vue@3.2.47
       vite: 4.2.0
@@ -2221,7 +2223,7 @@ packages:
       '@babel/core': 7.21.3
       '@babel/plugin-transform-typescript': 7.21.3_@babel+core@7.21.3
       '@vue/babel-plugin-jsx': 1.1.1_@babel+core@7.21.3
-      vite: 4.2.0_bbhgkqmop4v24vevyan3j2nitq
+      vite: 4.2.0
       vue: 3.2.47
     transitivePeerDependencies:
       - supports-color

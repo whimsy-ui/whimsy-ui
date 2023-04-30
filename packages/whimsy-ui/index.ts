@@ -17,10 +17,11 @@ import {
   WsPopup
 } from '@whimsy-ui/components';
 export { WsButton, WsWaterfall, WsCell, WsCellGroup, WsCheckbox, WsCheckboxGroup, WsRadio, WsRadioGroup, WsSwitch, WsInput, WsNoticeBar, WsOverlay, WsNotify, WsPopup };
-// import { ElAffix } from 'element-plus';
-// export { ElAffix };
+
 export * from './resolver';
 export * from '@whimsy-ui/presets';
+
+export * from '@whimsy-ui/components';
 
 export default {
   install(app: App) {
