@@ -1,18 +1,19 @@
 <template>
   <div class="play-container">
-    <ws-input v-model="value1" />
-    <ws-input v-model="value1" required />
-    <ws-input v-model="value1" />
-    <ws-input v-model="value1" label-align="center" />
-    <ws-input v-model="value1" label-align="right" />
+    <ws-input v-model="value1" label="标签" />
+    <ws-input v-model="value1" label-align="left" label="标签" />
+    <ws-input v-model="value1" label-align="right" label="标签" />
+    <ws-input v-model="value1" required label="标签" />
+    <ws-input v-model="value1" label="标签" placeholder="请输入一些内容" type="textarea" />
+    <ws-input v-model="value1" label="标签" placeholder="请输入一些内容" show-word-limit max-length="10" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-const value1 = ref(false);
+const value1 = ref('');
 watch(value1, (n) => {
-  console.log(n);
+  // console.log(n);
 });
 // code here
 </script>
