@@ -1,6 +1,6 @@
 import { ExtractPropTypes } from 'vue';
 import { unknownProp } from '@whimsy-ui/utils';
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@whimsy-ui/constants';
+import { UPDATE_MODEL_EVENT } from '@whimsy-ui/constants';
 import { isArray, makeStringProp } from '@whimsy-ui/utils';
 export const checkboxGroupProps = {
   modelValue: unknownProp,

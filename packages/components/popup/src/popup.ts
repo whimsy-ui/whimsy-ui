@@ -1,5 +1,4 @@
 import { ExtractPropTypes, PropType } from 'vue';
-import { TypeProp } from '../../composables';
 import { OPEN, CLOSE, UPDATE_SHOW_EVENT } from '@whimsy-ui/constants';
 import { makeStringProp, numericProp, truthProp } from '@whimsy-ui/utils';
 export type PopupPosition = 'top' | 'left' | 'bottom' | 'right' | 'center' | '';

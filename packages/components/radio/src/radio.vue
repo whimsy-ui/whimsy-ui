@@ -9,7 +9,7 @@
 import { inject, computed } from 'vue';
 import { useNamespace } from '@whimsy-ui/utils';
 import Checker from '../../checkbox/src/checker.vue';
-import { radioGroupContextKey } from '@whimsy-ui/components';
+import { radioGroupContextKey } from '../../utils';
 import { radioProps, radioEmits } from './radio';
 const ns = useNamespace('radio');
 defineOptions({

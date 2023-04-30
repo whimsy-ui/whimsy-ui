@@ -27,4 +27,3 @@ const ns = useNamespace('notice-bar');
 
 defineExpose({ init });
 </script>
-<style lang="scss" scoped></style>

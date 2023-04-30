@@ -1,4 +1,4 @@
-import { ref, reactive, computed, watch, onMounted, onUnmounted, StyleHTMLAttributes } from 'vue';
+import { ref, reactive, computed } from 'vue';
 import type { SetupContext, CSSProperties } from 'vue';
 import { NoticeBarProps, NoticeBarEmits } from './notice-bar';
 import { onMountedOrActivated, useRect } from '@whimsy-ui/hooks';
@@ -7,6 +7,7 @@ export default (props: NoticeBarProps, emits: SetupContext<NoticeBarEmits>['emit
   // wrap计算宽度 content进行位移
   const wrapper = ref<HTMLDivElement>();
   const content = ref<HTMLDivElement>();
+  // @ts-ignore
   let wrapperWidth = 0;
   let contentWidth = 0;
   const stats = reactive({
@@ -28,7 +29,9 @@ export default (props: NoticeBarProps, emits: SetupContext<NoticeBarEmits>['emit
   const init = () => {
     // 默认 1s 延迟，速度为 60px/s
     const { delay, speed, scrollable } = props;
+    // @ts-ignore
     const ms = isDef(delay) ? +delay * 1000 : 0;
+    // @ts-ignore
     wrapperWidth = 0;
     contentWidth = 0;
     stats.offset = 0;

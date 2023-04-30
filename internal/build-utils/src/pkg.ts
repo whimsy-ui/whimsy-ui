@@ -1,7 +1,7 @@
 import type { ProjectManifest } from '@pnpm/types';
 
 export const excludeFiles = (files: string[]) => {
-  const excludes = ['node_modules', 'test', 'mock', 'gulpfile', 'dist'];
+  const excludes = ['node_modules', 'test', 'mock', 'gulpfile', 'dist', 'cli'];
   return files.filter((path) => !excludes.some((exclude) => path.includes(exclude)));
 };
 export const getPackageManifest = (pkgPath: string) => {

@@ -2,6 +2,7 @@ import path from 'path';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { rollup } from 'rollup';
 import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
 import vue from '@vitejs/plugin-vue';
 import VueMacros from 'unplugin-vue-macros/rollup';
 import vueJsx from '@vitejs/plugin-vue-jsx';
@@ -40,7 +41,8 @@ async function buildFullEntry(minify: boolean) {
       },
       treeShaking: true,
       legalComments: 'eof'
-    })
+    }),
+    json()
   ];
   if (minify) {
     plugins.push(

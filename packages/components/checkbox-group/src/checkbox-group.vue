@@ -8,7 +8,7 @@
 import { provide, toRefs } from 'vue';
 import { checkboxGroupProps, checkboxGroupEmits } from './checkbox-group';
 import { useNamespace } from '@whimsy-ui/utils';
-import { checkboxGroupContextKey } from '@whimsy-ui/components';
+import { checkboxGroupContextKey } from '../../utils';
 defineOptions({
   name: 'WsCheckboxGroup'
 });

@@ -8,7 +8,7 @@
 import { provide, toRefs } from 'vue';
 import { radioGroupProps, radioGroupEmits } from './radio-group';
 import { useNamespace } from '@whimsy-ui/utils';
-import { radioGroupContextKey } from '@whimsy-ui/components';
+import { radioGroupContextKey } from '../../utils';
 defineOptions({
   name: 'WsRadioGroup'
 });

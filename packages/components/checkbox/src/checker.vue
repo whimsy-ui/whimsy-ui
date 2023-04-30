@@ -2,7 +2,7 @@
   <div :class="[ns.b(), disabled && ns.m('disabled'), labelDisabled && ns.m('label-disabled')]" @click.stop="onclick">
     <div :class="[ns.e('icon'), ns.em('icon', shape), checked && ns.em('icon', 'checked'), disabled && ns.em('icon', 'disabled')]">
       <slot name="icon"></slot>
-      <transition name="fade">
+      <transition name="ws-fade">
         <i v-if="!$slots.icon && checked" class="i-carbon-checkmark"></i>
       </transition>
     </div>
@@ -22,14 +22,3 @@ const onclick = (evt: MouseEvent) => {
   emit('toggle');
 };
 </script>
-<style scoped lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>

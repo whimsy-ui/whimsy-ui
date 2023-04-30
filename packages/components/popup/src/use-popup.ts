@@ -1,5 +1,5 @@
 import { PopupProps, PopupEmits } from './popup';
-import { watch, ref, type SetupContext, type CSSProperties, computed, reactive } from 'vue';
+import { watch, ref, type SetupContext, type CSSProperties, computed } from 'vue';
 import { callInterceptor, isDef } from '@whimsy-ui/utils';
 import { useGlobalZIndex } from '@whimsy-ui/hooks';
 export default (props: PopupProps, emit: SetupContext<PopupEmits>['emit']) => {

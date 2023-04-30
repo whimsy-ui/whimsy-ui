@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { WsPopup } from '@whimsy-ui/components';
+import { WsPopup } from '../../popup';
 import { notifyProps, notifyEmits } from './notify';
 import useNotify from './use-notify';
 import { useNamespace } from '@whimsy-ui/utils';
@@ -20,4 +20,3 @@ const a = useNotify(props, emits);
 // export variables and methods
 defineExpose({});
 </script>
-<style lang="scss" scoped></style>

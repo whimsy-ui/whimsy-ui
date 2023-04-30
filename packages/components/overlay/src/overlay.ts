@@ -1,7 +1,7 @@
 import { ExtractPropTypes } from 'vue';
-import { unknownProp, numericProp, makeStringProp } from '@whimsy-ui/utils';
+import { numericProp } from '@whimsy-ui/utils';
 import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@whimsy-ui/constants';
-import { makeNumericProp, truthProp } from '@whimsy-ui/utils';
+import { truthProp } from '@whimsy-ui/utils';
 export const overlayProps = {
   show: Boolean,
   zIndex: numericProp,

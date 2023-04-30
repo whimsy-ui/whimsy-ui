@@ -1,4 +1,4 @@
-import { InjectionKey, ToRefs, ReactiveEffect } from 'vue';
+import { InjectionKey, ToRefs } from 'vue';
 import { CheckboxGroupProps } from '@whimsy-ui/components';
 export type CheckboxGroupContext = {
   changeEvent: (...args: any) => any;

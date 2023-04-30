@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { WsOverlay } from '@whimsy-ui/components';
+import { WsOverlay } from '../../overlay';
 import { popupProps, popupEmits } from './popup';
 import usePopup from './use-popup';
 import { useNamespace } from '@whimsy-ui/utils';
@@ -24,4 +24,3 @@ const { overlayClick, close, open, opened, style, customZIndex, transitionName }
 // export variables and methods
 defineExpose({});
 </script>
-<style lang="scss" scoped></style>

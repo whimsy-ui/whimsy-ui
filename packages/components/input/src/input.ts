@@ -1,5 +1,5 @@
 import { ExtractPropTypes } from 'vue';
-import { unknownProp, numericProp, makeStringProp } from '@whimsy-ui/utils';
+import { unknownProp, makeStringProp } from '@whimsy-ui/utils';
 import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@whimsy-ui/constants';
 export const inputProps = {
   modelValue: unknownProp,

@@ -8,7 +8,6 @@
 </template>
 
 <script setup lang="ts" name="">
-import { ref, reactive, computed, watch, onMounted, onUnmounted } from 'vue';
 import { useNamespace } from '@whimsy-ui/utils';
 import { inputProps, inputEmits } from './input';
 import { WsCell } from '../../cell';
@@ -21,4 +20,3 @@ const ns = useNamespace('input');
 
 defineExpose({});
 </script>
-<style lang="scss" scoped></style>

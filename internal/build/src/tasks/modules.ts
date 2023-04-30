@@ -1,6 +1,7 @@
 import { rollup } from 'rollup';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+import json from '@rollup/plugin-json';
 import VueMacros from 'unplugin-vue-macros/rollup';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -45,7 +46,8 @@ export const buildModules = async () => {
         loaders: {
           '.vue': 'ts'
         }
-      })
+      }),
+      json()
     ],
     treeshake: false,
     external: await generateExternal({ full: false })

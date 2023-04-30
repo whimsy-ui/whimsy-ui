@@ -9,7 +9,7 @@
 import { computed, inject } from 'vue';
 import { checkboxProps, checkboxEmits } from './checkbox';
 import { useNamespace, isArray } from '@whimsy-ui/utils';
-import { checkboxGroupContextKey } from '@whimsy-ui/components';
+import { checkboxGroupContextKey } from '../../utils';
 import Checker from './checker.vue';
 defineOptions({
   name: 'WsCheckbox'
