@@ -14,9 +14,10 @@ import {
   WsNoticeBar,
   WsOverlay,
   WsNotify,
-  WsPopup
+  WsPopup,
+  WsImage
 } from '@whimsy-ui/components';
-export { WsButton, WsWaterfall, WsCell, WsCellGroup, WsCheckbox, WsCheckboxGroup, WsRadio, WsRadioGroup, WsSwitch, WsInput, WsNoticeBar, WsOverlay, WsNotify, WsPopup };
+export { WsButton, WsWaterfall, WsCell, WsCellGroup, WsCheckbox, WsCheckboxGroup, WsRadio, WsRadioGroup, WsSwitch, WsInput, WsNoticeBar, WsOverlay, WsNotify, WsPopup, WsImage };
 
 export * from './resolver';
 export * from '@whimsy-ui/presets';
@@ -38,5 +39,6 @@ export default {
     app.component(WsOverlay.name, WsOverlay);
     app.component(WsNotify.name, WsNotify);
     app.component(WsPopup.name, WsPopup);
+    app.component(WsImage.name, WsImage);
   }
 };

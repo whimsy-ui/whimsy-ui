@@ -1,3 +1,17 @@
+<script setup lang="ts">
+import { useNamespace, addUnit } from '@whimsy-ui/utils';
+import { inputProps, inputEmits } from './input';
+import { WsCell } from '../../cell';
+import useInput from './use-input';
+defineOptions({
+  name: 'WsInput'
+});
+const ns = useNamespace('input');
+const props = defineProps(inputProps);
+const emits = defineEmits(inputEmits);
+const { inputId, id, inputRef, blur, focus, onblur, onfocus, oninput, onclick, startComposing, endComposing, onkeypress, wordCount } = useInput(props, emits);
+defineExpose({ inputRef, blur, focus });
+</script>
 <template>
   <WsCell :class="[ns.b()]" :title-class="[ns.e('label'), required && ns.m('required'), labelAlign && ns.em('label', labelAlign)]">
     <template #title>
@@ -47,18 +61,3 @@
     </template>
   </WsCell>
 </template>
-
-<script setup lang="ts">
-import { useNamespace, addUnit } from '@whimsy-ui/utils';
-import { inputProps, inputEmits } from './input';
-import { WsCell } from '../../cell';
-import useInput from './use-input';
-defineOptions({
-  name: 'WsInput'
-});
-const ns = useNamespace('input');
-const props = defineProps(inputProps);
-const emits = defineEmits(inputEmits);
-const { inputId, id, inputRef, blur, focus, onblur, onfocus, oninput, onclick, startComposing, endComposing, onkeypress, wordCount } = useInput(props, emits);
-defineExpose({ inputRef, blur, focus });
-</script>

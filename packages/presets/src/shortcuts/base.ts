@@ -29,7 +29,7 @@ export const baseShortcuts: Record<string, string> = {
   // 方块
   'is-square': 'rounded-none',
   // 圆形
-  'is-round': 'rounded-full',
+  'is-round': 'rounded-full overflow-hidden',
 
   // 1px 线条 适配retina屏幕
   'hairline-common': 'absolute box-border content-empty pointer-events-none',

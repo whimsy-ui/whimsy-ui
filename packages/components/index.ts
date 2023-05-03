@@ -13,5 +13,6 @@ export * from './notice-bar';
 export * from './overlay';
 export * from './notify';
 export * from './popup';
+export * from './image';
 
 export * from './utils';
