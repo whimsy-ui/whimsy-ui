@@ -46,7 +46,6 @@
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-angular": "^17.4.4",
     "@commitlint/cz-commitlint": "^17.4.4",
-    "@iconify-json/ic": "^1.1.13",
     "@pnpm/types": "^8.10.0",
     "@types/fs-extra": "^11.0.1",
     "@types/gulp": "^4.0.10",
@@ -93,6 +92,9 @@
     "web-norm": "^1.0.27"
   },
   "dependencies": {
+    "@iconify-json/ic": "^1.1.13",
+    "@iconify-json/line-md": "^1.1.24",
+    "@iconify-json/tabler": "^1.1.74",
     "@whimsy-ui/build-utils": "workspace:*",
     "@whimsy-ui/cli": "workspace:*",
     "@whimsy-ui/components": "workspace:*",

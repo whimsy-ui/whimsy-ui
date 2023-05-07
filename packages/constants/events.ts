@@ -7,3 +7,5 @@ export const CLOSE = 'close';
 export const CLOSED = 'closed';
 export const OPEN = 'open';
 export const OPENED = 'opened';
+export const LOAD = 'load';
+export const ERROR = 'error';

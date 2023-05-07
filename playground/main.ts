@@ -6,7 +6,6 @@ import 'uno.css';
   const apps = import.meta.glob('./src/*.vue');
   const name = window.location.pathname.replace(/^\//, '') || 'App';
   const file = apps[`./src/${name}.vue`];
-
   if (!file) {
     window.location.pathname = 'App';
     return;

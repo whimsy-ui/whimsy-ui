@@ -1,7 +1,7 @@
 import { ExtractPropTypes, PropType } from 'vue';
 import { makeStringProp } from '@whimsy-ui/utils';
-import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@whimsy-ui/constants';
-import { makeNumericProp, numericProp } from '@whimsy-ui/utils';
+import { LOAD, ERROR } from '@whimsy-ui/constants';
+import { truthProp, numericProp } from '@whimsy-ui/utils';
 export type ImageFit = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
 export type ImagePosition = 'center' | 'top' | 'right' | 'bottom' | 'left' | string;
 export const imageProps = {
@@ -12,11 +12,13 @@ export const imageProps = {
   radius: numericProp,
   round: Boolean,
   fit: String as PropType<ImageFit>,
-  position: String as PropType<ImagePosition>
+  position: String as PropType<ImagePosition>,
+  showLoading: truthProp,
+  showError: truthProp
 };
 export const imageEmits = {
-  [CHANGE_EVENT]: (newValue: unknown) => true,
-  [UPDATE_MODEL_EVENT]: (newValue: unknown) => true
+  [LOAD]: (event?: Event) => event instanceof Event,
+  [ERROR]: (event?: Event) => event instanceof Event
 };
 
 export type ImageProps = ExtractPropTypes<typeof imageProps>;
